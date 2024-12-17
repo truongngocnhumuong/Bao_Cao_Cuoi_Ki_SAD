@@ -36,12 +36,87 @@
        - Đảm bảo hệ thống hoạt động mượt mà với thời gian phản hồi nhanh chóng.
        - Khả năng xử lý lượng lớn dữ liệu và nhiều truy vấn cùng lúc.
       
-2. Phân tích các ca sử dụng:
-   - Kiến trúc đề xuất:
-   - 
+2. Phân tích các ca sử dụng: (Trang 4. Mục 1.1 System overview : The key features of the system are.....)
+   - Kiến trúc đề xuất: Mô hình triển khai : Kiến trúc máy khách-máy chủ.
+     + Máy khách: Các nhân viên y tế và quản trị viên sẽ truy cập hệ thống qua trình duyệt web (Firefox) trên giao diện tương tác dạng biểu mẫu.
+     + Máy chủ: Lưu trữ hồ sơ bệnh nhân và xử lý yêu cầu từ máy khách, được vận hành trên các máy chủ Linux.
    - Các cơ chế phân tích:
+     + Yêu cầu hệ thống:
+       - Tính khả dụng:
+         + Hệ thống phải hoạt động liên tục trong giờ làm việc từ 08:00 - 18:30, từ Thứ Hai đến Thứ Sáu.
+         + Bảo trì được sắp xếp ngoài giờ làm việc (21:00 - nửa đêm, hoặc Chủ Nhật 08:00 - 12:00).
+       - Hiệu suất:
+         + Hệ thống phải phản hồi trong vòng 2 giây cho các truy vấn bệnh nhân thông thường.
+         + Nếu phản hồi mất hơn 2 giây, hệ thống hiển thị trạng thái xử lý để tránh bực bội cho người dùng.  
+     + Cơ chế bảo mật:
+       - Hệ thống phải đảm bảo quyền riêng tư dữ liệu bệnh nhân, chỉ cho phép nhân viên được ủy quyền truy cập.
+       - Tích hợp hệ thống xác thực đa yếu tố.
+     + Cơ chế quản lý dữ liệu:
+       - Dữ liệu được xác thực trước khi lưu, đặc biệt đối với các mục không chọn từ menu.
+       - Tất cả thông tin được lưu giữ tuân thủ các tiêu chuẩn bảo mật và quy định của hệ thống y tế Mid-Scotland.
    - Kết quả phân tích từng ca sử dụng:
-   - 
+     + Quản lý chắm sóc cá nhân:
+       - Brief Description: Ca sử dụng này cho phép nhân viên lâm sàng quản lý thông tin bệnh nhân, bao gồm tạo hồ sơ mới, chỉnh sửa thông tin, và xem lịch sử điều trị.
+       - Flow of Events:
+         + Basic Flow:
+           - Nhân viên lâm sàng đăng nhập vào hệ thống.
+           - Hệ thống hiển thị giao diện tìm kiếm hồ sơ bệnh nhân.
+           - Nhân viên lâm sàng tìm kiếm hoặc chọn một bệnh nhân từ danh sách.
+           - Nhân viên lâm sàng xem, chỉnh sửa thông tin, hoặc tạo hồ sơ bệnh nhân mới.
+           - Hệ thống xác nhận thay đổi và lưu vào cơ sở dữ liệu.
+         + Alternative Flows:
+           - AF1: Không tìm thấy bệnh nhân: Nếu không có kết quả tìm kiếm, nhân viên lâm sàng được thông báo và có thể tạo hồ sơ bệnh nhân mới.
+           - AF2: Dữ liệu không hợp lệ: Nếu thông tin nhập vào không đúng định dạng, hệ thống hiển thị thông báo lỗi và yêu cầu sửa.
+       - Special Requirements:
+         + Phải xác thực thông tin đăng nhập của nhân viên.
+         + Dữ liệu nhập phải được kiểm tra định dạng và tính hợp lệ.
+       - Pre-Conditions:
+         + Nhân viên lâm sàng đã đăng nhập thành công vào hệ thống.
+         + Cơ sở dữ liệu bệnh nhân khả dụng.
+       - Post-Conditions:
+         + Hồ sơ bệnh nhân được tạo mới hoặc cập nhật.
+         + Các thay đổi được lưu trữ an toàn trong cơ sở dữ liệu.
+       - Extension Points: Tích hợp hệ thống hồ sơ quốc gia: Khi tạo hoặc chỉnh sửa hồ sơ, hệ thống có thể gửi thông tin tóm tắt đến hệ thống hồ sơ bệnh án quốc gia.
+     + Theo dõi bệnh nhân:
+       - Brief Description: Hệ thống theo dõi hồ sơ bệnh nhân đang điều trị, phát hiện các vấn đề như bỏ lỡ cuộc hẹn hoặc nguy cơ sức khỏe, và đưa ra cảnh báo cho nhân viên lâm sàng.
+       - Flow of Events:
+         + Basic Flow:
+           - Hệ thống tự động kiểm tra các hồ sơ bệnh nhân định kỳ.
+           - Nếu phát hiện vấn đề (bỏ lỡ cuộc hẹn, không tuân thủ điều trị), hệ thống ghi nhận cảnh báo.
+           - Nhân viên lâm sàng nhận được thông báo qua giao diện hoặc email.
+         + Alternative Flows:
+           - AF1: Không có vấn đề: Nếu không có vấn đề nào được phát hiện, hệ thống không gửi cảnh báo.
+           - AF2: Sai thông tin lịch sử: Nếu dữ liệu bệnh nhân không đầy đủ, hệ thống báo lỗi đến quản trị viên.
+       - Special Requirements:
+         + Hệ thống phải chạy kiểm tra tự động hàng ngày.
+         + Dữ liệu lịch sử phải chính xác để đưa ra cảnh báo đúng.
+       - Pre-Conditions:
+         + Hồ sơ bệnh nhân đầy đủ và có dữ liệu lịch sử điều trị.
+         + Nhân viên lâm sàng đã được ủy quyền nhận cảnh báo.
+       - Post-Conditions:
+         + Cảnh báo được ghi lại và gửi đến nhân viên lâm sàng.
+         + Hành động cần thiết (nếu có) được thực hiện bởi nhân viên lâm sàng.
+       - Extension Points: Tích hợp hệ thống lịch hẹn: Dữ liệu lịch hẹn được đối chiếu với hồ sơ bệnh nhân để kiểm tra sự tuân thủ điều trị.
+     + Quản lý giam giữ bắt buộc
+       - Brief Description:
+       - Flow of Events:
+         + Basic Flow:
+         + Alternative Flows:
+       - Special Requirements:
+       - Pre-Conditions:
+       - Post-Conditions:
+       - Extension Points:
+     + Báo cáo hành chính:
+       - Brief Description:
+       - Flow of Events:
+         + Basic Flow:
+         + Alternative Flows:
+       - Special Requirements:
+       - Pre-Conditions:
+       - Post-Conditions:
+       - Extension Points:
+     
+     
   
 4. Xác định các phần tử thiết kế
 5. Thiết kế hệ thống con
