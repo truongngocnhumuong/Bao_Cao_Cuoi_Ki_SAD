@@ -35,11 +35,16 @@
      + Hiệu suất:
        - Đảm bảo hệ thống hoạt động mượt mà với thời gian phản hồi nhanh chóng.
        - Khả năng xử lý lượng lớn dữ liệu và nhiều truy vấn cùng lúc.
-
-
-
-3. Phân tích các ca sử dụng
+      
+2. Phân tích các ca sử dụng:
+   - Kiến trúc đề xuất:
+   - 
+   - Các cơ chế phân tích:
+   - Kết quả phân tích từng ca sử dụng:
+   - 
+  
 4. Xác định các phần tử thiết kế
 5. Thiết kế hệ thống con
 6. Thiết kế các lớp
-7. Kết luận 
+7. Kết luận
+   
