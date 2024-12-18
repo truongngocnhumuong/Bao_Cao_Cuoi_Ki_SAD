@@ -97,24 +97,46 @@
          + Cảnh báo được ghi lại và gửi đến nhân viên lâm sàng.
          + Hành động cần thiết (nếu có) được thực hiện bởi nhân viên lâm sàng.
        - Extension Points: Tích hợp hệ thống lịch hẹn: Dữ liệu lịch hẹn được đối chiếu với hồ sơ bệnh nhân để kiểm tra sự tuân thủ điều trị.
-     + Quản lý giam giữ bắt buộc
-       - Brief Description:
+     + Quản lý giam giữ bắt buộc: 
+       - Brief Description: Ghi nhận và quản lý thông tin bệnh nhân bị giam giữ tại bệnh viện an ninh để đảm bảo tuân thủ các quy định pháp luật.
        - Flow of Events:
          + Basic Flow:
-         + Alternative Flows:
+           - Nhân viên lâm sàng cập nhật thông tin giam giữ của bệnh nhân.
+           - Hệ thống xác minh thông tin nhập vào (ngày giam giữ, lý do).
+           - Thông tin được ghi nhận và lưu trữ.
+           - Hệ thống gửi thông báo nhắc nhở các cuộc kiểm tra định kỳ liên quan.
+         + Alternative Flows: AF1: Dữ liệu nhập không hợp lệ:
+           - Hệ thống hiển thị lỗi nếu dữ liệu nhập vào không đúng định dạng.
+           - Nhân viên phải sửa và gửi lại.
        - Special Requirements:
+         + Hệ thống phải tuân thủ các tiêu chuẩn và quy định pháp luật về giam giữ bắt buộc.
+         + Phải đảm bảo tính bảo mật cao cho dữ liệu.
        - Pre-Conditions:
+         + Nhân viên lâm sàng được cấp quyền chỉnh sửa thông tin giam giữ.
+         + Hệ thống phải hoạt động ổn định và truy cập được.
        - Post-Conditions:
-       - Extension Points:
+         + Thông tin giam giữ được cập nhật chính xác trong cơ sở dữ liệu.
+         + Lịch kiểm tra liên quan được lên kế hoạch và nhắc nhở.
+       - Extension Points: Tích hợp với hệ thống báo cáo quản lý: Các thông tin giam giữ được tổng hợp vào báo cáo hành chính.
      + Báo cáo hành chính:
-       - Brief Description:
+       - Brief Description: Tạo các báo cáo ẩn danh hàng tháng về số lượng bệnh nhân, chi phí điều trị, và các chỉ số quản lý.
        - Flow of Events:
          + Basic Flow:
-         + Alternative Flows:
+           - Quản trị viên chọn loại báo cáo cần tạo.
+           - Hệ thống thu thập dữ liệu liên quan và tạo báo cáo.
+           - Báo cáo được lưu trữ và sẵn sàng để tải xuống hoặc in.
+         + Alternative Flows: AF1: Không đủ dữ liệu:
+           - Nếu không đủ dữ liệu để tạo báo cáo, hệ thống hiển thị thông báo và yêu cầu kiểm tra lại.
        - Special Requirements:
+         + Báo cáo phải ẩn danh để bảo vệ thông tin cá nhân bệnh nhân.
+         + Thời gian xử lý báo cáo không quá 10 giây.
        - Pre-Conditions:
+         + Dữ liệu liên quan đã được ghi nhận đầy đủ trong hệ thống.
+         + Quản trị viên có quyền tạo báo cáo.
        - Post-Conditions:
-       - Extension Points:
+         + Báo cáo được lưu trữ và sẵn sàng để sử dụng.
+         + Hệ thống ghi lại lịch sử tạo báo cáo.
+       - Extension Points: Tích hợp với hệ thống quản lý cấp cao: Các báo cáo có thể được chia sẻ trực tiếp với quản lý cấp cao qua email.
      
      
   
