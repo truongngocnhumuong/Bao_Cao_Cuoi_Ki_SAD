@@ -55,7 +55,7 @@
        - Dữ liệu được xác thực trước khi lưu, đặc biệt đối với các mục không chọn từ menu.
        - Tất cả thông tin được lưu giữ tuân thủ các tiêu chuẩn bảo mật và quy định của hệ thống y tế Mid-Scotland.
    - Kết quả phân tích từng ca sử dụng:
-     + Quản lý chắm sóc cá nhân:
+     + **Quản lý chắm sóc cá nhân**:
        - Brief Description: Ca sử dụng này cho phép nhân viên lâm sàng quản lý thông tin bệnh nhân, bao gồm tạo hồ sơ mới, chỉnh sửa thông tin, và xem lịch sử điều trị.
        - Flow of Events:
          + Basic Flow:
@@ -77,7 +77,7 @@
          + Hồ sơ bệnh nhân được tạo mới hoặc cập nhật.
          + Các thay đổi được lưu trữ an toàn trong cơ sở dữ liệu.
        - Extension Points: Tích hợp hệ thống hồ sơ quốc gia: Khi tạo hoặc chỉnh sửa hồ sơ, hệ thống có thể gửi thông tin tóm tắt đến hệ thống hồ sơ bệnh án quốc gia.
-     + Theo dõi bệnh nhân:
+     + **Theo dõi bệnh nhân:**
        - Brief Description: Hệ thống theo dõi hồ sơ bệnh nhân đang điều trị, phát hiện các vấn đề như bỏ lỡ cuộc hẹn hoặc nguy cơ sức khỏe, và đưa ra cảnh báo cho nhân viên lâm sàng.
        - Flow of Events:
          + Basic Flow:
@@ -97,7 +97,7 @@
          + Cảnh báo được ghi lại và gửi đến nhân viên lâm sàng.
          + Hành động cần thiết (nếu có) được thực hiện bởi nhân viên lâm sàng.
        - Extension Points: Tích hợp hệ thống lịch hẹn: Dữ liệu lịch hẹn được đối chiếu với hồ sơ bệnh nhân để kiểm tra sự tuân thủ điều trị.
-     + Quản lý giam giữ bắt buộc: 
+     + **Quản lý giam giữ bắt buộc:**
        - Brief Description: Ghi nhận và quản lý thông tin bệnh nhân bị giam giữ tại bệnh viện an ninh để đảm bảo tuân thủ các quy định pháp luật.
        - Flow of Events:
          + Basic Flow:
@@ -118,7 +118,7 @@
          + Thông tin giam giữ được cập nhật chính xác trong cơ sở dữ liệu.
          + Lịch kiểm tra liên quan được lên kế hoạch và nhắc nhở.
        - Extension Points: Tích hợp với hệ thống báo cáo quản lý: Các thông tin giam giữ được tổng hợp vào báo cáo hành chính.
-     + Báo cáo hành chính:
+     + **Báo cáo hành chính:**
        - Brief Description: Tạo các báo cáo ẩn danh hàng tháng về số lượng bệnh nhân, chi phí điều trị, và các chỉ số quản lý.
        - Flow of Events:
          + Basic Flow:
