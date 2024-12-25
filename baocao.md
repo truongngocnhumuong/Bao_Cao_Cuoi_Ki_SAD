@@ -43,7 +43,8 @@
      + Phân quyền và bảo mật: Nhân viên y tế và quản trị viên cần quyền truy cập khác nhau vào dữ liệu; máy chủ quản lý quyền này.
      + Tích hợp dễ dàng: Hệ thống phải tích hợp với các hệ thống bên ngoài như PRESCRIPTION và hồ sơ bệnh án quốc gia.
      + Độ tin cậy cao: Các yêu cầu về tính khả dụng trong giờ làm việc và tính bảo mật phù hợp với kiến trúc máy khách-máy chủ.
-   - Biểu đồ package mô tả kiến trúc : ![PlantText](https://www.planttext.com/plantuml/png/XPFVQy8m4CVV2_qVZZufG_Rkmx1kE0SEdDNjEQOt3Qj9bnzkClpVT-caT4tLK6Z9VUxolUyr8sEPjcvNn579-0VR82JtXK1f8HCv9l0JHq2h3hxX6iPQVHdKq9i8ZU_gkrzZVl626GF9HEdTOCqCvh1wIeBm0xCCNbaXScQ5aY6G8TDy2nCdkGU8j8SJTOmZUXgACzHxqjEjE2tBGl3g5FW3k-IEdH4IwMkcDeB3Z1rQd5ytCDUA4pMdSkIHRwBNRpEFA54pYmiibROc1APCvWMc1RQYnq1LwkoMpcdA5nmxT7dLCZo9jfMpuVx9UCoe5ohS8Q8o-9-Flba_pmicdco11NAbSnCEbMQXXBGx3_bw7OJBXVMwJMlOhHyA1eExSrCRmdIvd9EAJuV66ihjvgeIvomUrYR1YdxsoqNQZLFsYqDzk5sLli8L1MrJAFkPIMzw8tIrZTetIgStf7HlzdHfucY4Cg-k-2y0)
+    - Biểu đồ package mô tả kiến trúc : 
+    ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bT1Od9sOdggWf9pJcPgNecIGZMNWa9qU6gIWbDHVdbnQb4iLoqNGbLmQb5PQX5KbME0Poo8TYejpinBBIvMyCbFpqn6rU2IM9AOb5YS2jKIa5W2iaOXA3KvloYb6ApTEISpBpCvCKS1f1Qi6yL-1LrTEwXTO1B2HxSJNG2Y2iCwxChGNE2GcfTIcfi30000__y30000)
    - Các cơ chế phân tích:
      + Yêu cầu hệ thống:
        - Tính khả dụng:
@@ -82,55 +83,25 @@
          + Các thay đổi được lưu trữ an toàn trong cơ sở dữ liệu.
        - Extension Points: Tích hợp hệ thống hồ sơ quốc gia: Khi tạo hoặc chỉnh sửa hồ sơ, hệ thống có thể gửi thông tin tóm tắt đến hệ thống hồ sơ bệnh án quốc gia.
      + ### **Theo dõi bệnh nhân:**
-        1. Các lớp phân tích:
-           - Hồ sơ bệnh nhân : Quản lý thông tin cá nhân, lịch sử điều trị, và lịch hẹn của bệnh nhân.
-             + Thuộc tính:
-               - ID bệnh nhân: String
-               - tên: String
-               - Lịch sử điều trị: List<DieuTri>
-               - Cuộn hẹn: List<CuocHen>
-             + Nhiệm vụ: Cung cấp thông tin về lịch sử điều trị và lịch hẹn để kiểm tra tuân thủ.
-           - Trình theo dõi điều trị: Kiểm tra và phát hiện các vấn đề liên quan đến tuân thủ điều trị.
-             + Thuộc tính: Tần suất kiểm tra: int
-             + Nhiệm vụ: Tự động kiểm tra hồ sơ bệnh nhân để phát hiện các vấn đề.
-           - Cảnh báo : Quản lý thông tin cảnh báo khi phát hiện vấn đề.
-             + Thuộc tính:
-               - ID cảnh báo: String
-               - Loại cảnh báo: String
-               - Tin nhắn cảnh báo: String
-             + Nhiệm vụ: Ghi nhận và gửi cảnh báo cho nhân viên lâm sàng.
-           - Nhân viên lâm sàn: Người nhận cảnh báo và thực hiện hành động cần thiết.
-             + Thuộc tính:
-               - ID nhân viên: String
-               - Email: String
-             + Nhiệm vụ: Nhận cảnh báo và phản hồi.
-           - Hệ thống lịch hẹn: Tích hợp với hệ thống lịch hẹn bên ngoài để đối chiếu dữ liệu.
-             + Thuộc tính: Dữ liệu cuộc hẹn : List<CuocHen>
-             + Nhiệm vụ: Cung cấp thông tin lịch hẹn để kiểm tra tuân thủ.
-            
-        2. Biểu đồ sequence:
-           ![PlantText](https://www.planttext.com/plantuml/png/ZLE_IiD06DyFxXq-EkdW2sIGqWeMMefWSRzUGkyWlIl9jU0e3XsSYfERgRY88g8E9eF3YUznR-ANDCMaLJJRST_lxtrfneP5PZeEAM7Sw0WQVM6N2cRItYa8xN8CiRrMemQm6Fg2gHCPA4ec299SJfWoq1X4zbu9C2BGuDjN2HyBwRApAPZ8PHS5SX199GOuSA3b1hhZiak8FnCOkcoED2hNBq0TVQnRWHAvx3PeZe8kMwWHXAZ21GYNlgs0FSb5PyjcswKto3-qYIwcsao95jEK5D7bZ9bWmsVr17lxDKCUz5nwUuecx0jwC5AXWH-IK595mHxIL6azFA4lc65XuBli4KBiRZxTuDZsKcRqe8lpvsFicjMAeAIS-Bza7OwjX0QEX4qCY7m0bm8JAtnT1582-6sQAYj51PSc6lXtux33XSIMNFfkgZoxAw8Ic7Eibyo3GvSzo7N11Kc5a98WZ0FehcwvVVxRNRs44falqHDV9nIuwwBWk58Zb50-9NxmoteqyRhuSxu0)
-        3. Biểu đồ lớp:
-           ![Diagram](https://www.planttext.com/plantuml/png/XLEzJiCm4DuhzHsiJa6qBn2XgYePEaGiYTXDOiKd4XibDX92p0myHK6CY8M5PkoJv4suf7RpKw9ck_k-ptVVtMLLA9ehdQNJIPJIeY0R6SWr4_o6Kq6UfnE2toN9gCsv950vYCGYYfsaKeXue3rWEip19JuKwif4oovdKqiRr3z4BKgV_EuZpiNOCmSYQe-KzgsNwSIwGetW8MVIaz2wKbG4cYgJTma8PQ5xO5cOqr3ltqN8jSDnB6vlEBRUDHLyJMM_dabs1sXIms492PuMoGYQIWeZaABI84x48GIcB6FUo6o4VHgULIRQlkd4zGfgDxV0X4-pW3Q2Hmbnpy-0qlLbeM5_BAEGdhX5yh5hwyia_gkxOI6N8Z4xRSl6siTByCyTaTUbZLr8x-8NYsN_M5moYt0_9AfsdmyahifllDsgVDKpLFQxEwDDg_8jueHNkr-1uXwpbjgRGPMgTbjPopu49tVxhKI-XMlgS1qeIQho2uZY-n-CZMJ5HDpysdy0)
-        - Giải thích:
-          + PatientRecord: Là nguồn dữ liệu chính, cung cấp lịch sử điều trị và lịch hẹn để kiểm tra tuân thủ.
-          + TreatmentMonitor:
-            - Lớp chính thực hiện chức năng kiểm tra hồ sơ bệnh nhân.
-            - Tương tác với PatientRecord và AppointmentSystem để lấy dữ liệu cần thiết.
-            - Tạo cảnh báo thông qua lớp Alert.
-           
-          + Alert: Quản lý thông tin cảnh báo và gửi đến ClinicalStaff.
-          + ClinicalStaff: Nhận thông báo và thực hiện các hành động cần thiết.
-          + AppointmentSystem: Hỗ trợ đối chiếu lịch hẹn, đảm bảo kiểm tra đầy đủ thông tin.  
-        4. Quan hệ giữa các lớp:
-          - PatientRecord và TreatmentMonitor: Quan hệ kết hợp (association): TreatmentMonitor sử dụng dữ liệu từ PatientRecord.
-          - TreatmentMonitor và Alert: Quan hệ tạo (dependency): TreatmentMonitor tạo cảnh báo thông qua Alert.
-          - Alert và ClinicalStaff: Quan hệ giao tiếp: Alert gửi thông báo đến ClinicalStaff.
-          - TreatmentMonitor và AppointmentSystem: Quan hệ tích hợp: TreatmentMonitor lấy dữ liệu lịch hẹn từ AppointmentSystem.
-           
-             
-             
-       
+       - Brief Description: Hệ thống theo dõi hồ sơ bệnh nhân đang điều trị, phát hiện các vấn đề như bỏ lỡ cuộc hẹn hoặc nguy cơ sức khỏe, và đưa ra cảnh báo cho nhân viên lâm sàng.
+       - Flow of Events:
+         + Basic Flow:
+           - Hệ thống tự động kiểm tra các hồ sơ bệnh nhân định kỳ.
+           - Nếu phát hiện vấn đề (bỏ lỡ cuộc hẹn, không tuân thủ điều trị), hệ thống ghi nhận cảnh báo.
+           - Nhân viên lâm sàng nhận được thông báo qua giao diện hoặc email.
+         + Alternative Flows:
+           - AF1: Không có vấn đề: Nếu không có vấn đề nào được phát hiện, hệ thống không gửi cảnh báo.
+           - AF2: Sai thông tin lịch sử: Nếu dữ liệu bệnh nhân không đầy đủ, hệ thống báo lỗi đến quản trị viên.
+       - Special Requirements:
+         + Hệ thống phải chạy kiểm tra tự động hàng ngày.
+         + Dữ liệu lịch sử phải chính xác để đưa ra cảnh báo đúng.
+       - Pre-Conditions:
+         + Hồ sơ bệnh nhân đầy đủ và có dữ liệu lịch sử điều trị.
+         + Nhân viên lâm sàng đã được ủy quyền nhận cảnh báo.
+       - Post-Conditions:
+         + Cảnh báo được ghi lại và gửi đến nhân viên lâm sàng.
+         + Hành động cần thiết (nếu có) được thực hiện bởi nhân viên lâm sàng.
+       - Extension Points: Tích hợp hệ thống lịch hẹn: Dữ liệu lịch hẹn được đối chiếu với hồ sơ bệnh nhân để kiểm tra sự tuân thủ điều trị.
      + ### **Quản lý giam giữ bắt buộc:**
        - Brief Description: Ghi nhận và quản lý thông tin bệnh nhân bị giam giữ tại bệnh viện an ninh để đảm bảo tuân thủ các quy định pháp luật.
        - Flow of Events:
