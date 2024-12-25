@@ -132,26 +132,55 @@
              
        
      + ### **Quản lý giam giữ bắt buộc:**
-       - Brief Description: Ghi nhận và quản lý thông tin bệnh nhân bị giam giữ tại bệnh viện an ninh để đảm bảo tuân thủ các quy định pháp luật.
-       - Flow of Events:
-         + Basic Flow:
-           - Nhân viên lâm sàng cập nhật thông tin giam giữ của bệnh nhân.
-           - Hệ thống xác minh thông tin nhập vào (ngày giam giữ, lý do).
-           - Thông tin được ghi nhận và lưu trữ.
-           - Hệ thống gửi thông báo nhắc nhở các cuộc kiểm tra định kỳ liên quan.
-         + Alternative Flows: AF1: Dữ liệu nhập không hợp lệ:
-           - Hệ thống hiển thị lỗi nếu dữ liệu nhập vào không đúng định dạng.
-           - Nhân viên phải sửa và gửi lại.
-       - Special Requirements:
-         + Hệ thống phải tuân thủ các tiêu chuẩn và quy định pháp luật về giam giữ bắt buộc.
-         + Phải đảm bảo tính bảo mật cao cho dữ liệu.
-       - Pre-Conditions:
-         + Nhân viên lâm sàng được cấp quyền chỉnh sửa thông tin giam giữ.
-         + Hệ thống phải hoạt động ổn định và truy cập được.
-       - Post-Conditions:
-         + Thông tin giam giữ được cập nhật chính xác trong cơ sở dữ liệu.
-         + Lịch kiểm tra liên quan được lên kế hoạch và nhắc nhở.
-       - Extension Points: Tích hợp với hệ thống báo cáo quản lý: Các thông tin giam giữ được tổng hợp vào báo cáo hành chính.
+        - Key Abstractions :
+       ![PlantText](https://www.planttext.com/plantuml/png/N8v12i9034NtESKSfL8HbyMU8Cn43Cma9KaNHJoPYnx9AuWe2BFzxpzuh-S-UA35sYhaYkvfmc2II7T82HxmMy-4DMuZ6ascLt9d5QpTwKX14gnomioLO-lul2wBMinVlOCZEbqegvNUsZoe7KhZlm83IVaq0y0R003__mC0)
+       - Key Abstraction Definitions :
+         Patient (Bệnh nhân): Đại diện cho cá nhân được quản lý trong hệ thống.
+         HealthCareProfessional (Nhân viên y tế): Người thực hiện các đánh giá và hỗ trợ.
+         DetentionFacility (Cơ sở giam giữ): Thông tin về địa điểm và điều kiện giam giữ.
+         SupportSession (Phiên hỗ trợ): Các buổi hỗ trợ tâm lý/điều trị.
+         CaseRecord (Hồ sơ vụ việc): Quản lý thông tin chi tiết về trường hợp của bệnh nhân.
+         SystemAdmin (Quản trị viên hệ thống): Người quản lý và giám sát hệ thống.
+       - Upper-Level layers and their dependentcies :
+        ![PlantText](https://www.planttext.com/plantuml/png/V9F1Qjmm54Nt-efBLkqYFv15IDf2EYIK5ZBGhU8nigX7urhIqA5aKRAOHLTPXzAMOGXjCPD5DxKeMJZCVxmlw2yKQUpKpfXwPQ5xzSvzJ_hZRW-quRcnuvHbF7h3HOoTbtciOsMuaHE54pwBSpmwado2aIGtLuzty9u1KSgrnd0G5lvxBibTA9Y4t4UCoAsGUhsjjryaL1OATvTKNbjCgoyJ678_eCJwXjmdYL7rIma6dBDpzW_cCCjI6TKi4o6ZXcYp8FTD2LzjgKG7x8dLKiLQRsGDusjo1TBgDvH8F5o6ARbblNdi0unXSWvJ5If1GcwH8IKtxydpoivWg5n549AF8IIvrHRzCsuu3gCerhhXFitj316LHTO-jCFkNRMf0G-)
+       - Layer Definitions :
+           + Lớp giao diện (Presentation Layer - UI/UX):
+              - Mục đích: Cung cấp giao diện người dùng để các nhân viên y tế, quản trị viên hệ thống và nhân viên hỗ trợ tương 
+                tác với hệ thống.
+              - Phụ thuộc:
+                + Phụ thuộc vào Lớp logic ứng dụng để lấy dữ liệu và hiển thị.
+                + Phụ thuộc vào API để xử lý dữ liệu đầu vào và đầu ra.
+              - Ví dụ các thành phần:
+                + Bảng điều khiển quản lý bệnh nhân.
+                + Giao diện tạo và xem hồ sơ vụ việc.
+                + Giao diện lên lịch các phiên hỗ trợ.
+           + Lớp logic ứng dụng (Application Logic Layer):
+              - Mục đích: Xử lý các logic nghiệp vụ chính, như quy tắc giam giữ, kiểm tra tính hợp lệ dữ liệu và quy trình làm                   việc.
+              - Phụ thuộc:
+                + Phụ thuộc vào Lớp truy cập dữ liệu để lấy và lưu trữ dữ liệu.
+                + Cung cấp dữ liệu đã xử lý cho Lớp giao diện.
+              - Ví dụ các thành phần:
+                + Quy tắc quản lý hồ sơ (liên kết bệnh nhân với cơ sở giam giữ).
+                + Logic lên lịch các phiên hỗ trợ.
+                + Logic kiểm tra chứng chỉ của nhân viên y tế.
+            + Lớp truy cập dữ liệu (Data Access Layer):
+              - Mục đích: Cung cấp giao diện có cấu trúc để truy vấn, cập nhật và quản lý cơ sở dữ liệu.
+              - Phụ thuộc:
+                + Phụ thuộc vào Lớp cơ sở dữ liệu để lưu trữ và truy xuất dữ liệu thực tế.
+                + Hỗ trợ Lớp logic ứng dụng với các thực thể và thao tác dữ liệu.
+              - Ví dụ các thành phần:
+                + ORM (Object-Relational Mapping) cho các thực thể như Patient, CaseRecord, SupportSession.
+                + Các phương pháp đồng bộ dữ liệu (như quản lý bộ nhớ đệm - cache).
+            + Lớp cơ sở dữ liệu (Database Layer):
+              - Mục đích: Lưu trữ tất cả dữ liệu thô, bao gồm thông tin bệnh nhân, hồ sơ vụ việc và nhật ký các phiên hỗ trợ.
+              - Phụ thuộc:
+                + Không phụ thuộc vào bất kỳ lớp nào khác (lớp nền tảng).
+                + Phục vụ dữ liệu cho Lớp truy cập dữ liệu.
+              - Ví dụ các thành phần:
+                + Bảng dữ liệu cho Patients, HealthCareProfessionals, CaseRecords, v.v.
+                + Chiến lược sao lưu và đồng bộ hóa.
+        - Biểu đồ sequence :
+         ![PlantText](https://www.planttext.com/plantuml/png/h9J1Qjim6CVlUee_FMs7la0Wet4CIy2Cm1hOLLKzIyoHKqiUv0bws6LZXnrNjuT1MEaEFTcC7bJo7dg2lSAGab2xYJiAkndq-_xwlfy-_AU-ErAQvhgOfOGodUKOnJJLV4ZpU99dxsEbH2Pf2gem6ax8dEPQC36dKkFWxKBfU8ONq_7B0mTCn-tpe512naeXoXB1F194RIIaccB0cAVe8iuz5GxsO2TKnUlJW91-7u6jRZJklzZgHu6pOW6Tcv-Iezyde-44Xwym7VVmXjlgUWxDpQrCe8N4YQtF9OVavbAIwTY1GTJ3QrjV2opCiW3paTfMPGPkwwzGgx9T5aIkB1n4FKIhNqLdV3XOWq4FnzmiPrqWFfgB36nLGjdwEqvjVODKsFgy8660m-rTxqp98Dr44kdctWl9mLpe-hBDDCUvhQxmmLPt6cU5-tQyxtiZffdrQDHMgbDz_zcKaYCHfeJsadLkgr8cso7QpeTUkSzs3zHHk-E-GUu8RgPuL_lVfU6xrSJ3Q7aca-U9PesWVpXkeHsk_RirHtM28xEKI6tzYN7NwpVdgBw2DfSpfERt8x_xwQTsENse84_ixcvcbz0v5owoqUlpDxXfQzlSV_3RaDDUvADOdhh_727aBm000F__0m00)
      + ### **Báo cáo hành chính:**
        - Brief Description: Tạo các báo cáo ẩn danh hàng tháng về số lượng bệnh nhân, chi phí điều trị, và các chỉ số quản lý.
        - Flow of Events:
