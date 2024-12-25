@@ -43,7 +43,8 @@
      + Phân quyền và bảo mật: Nhân viên y tế và quản trị viên cần quyền truy cập khác nhau vào dữ liệu; máy chủ quản lý quyền này.
      + Tích hợp dễ dàng: Hệ thống phải tích hợp với các hệ thống bên ngoài như PRESCRIPTION và hồ sơ bệnh án quốc gia.
      + Độ tin cậy cao: Các yêu cầu về tính khả dụng trong giờ làm việc và tính bảo mật phù hợp với kiến trúc máy khách-máy chủ.
-   - Biểu đồ package mô tả kiến trúc : ![PlantText](https://www.planttext.com/plantuml/png/XPFVQy8m4CVV2_qVZZufG_Rkmx1kE0SEdDNjEQOt3Qj9bnzkClpVT-caT4tLK6Z9VUxolUyr8sEPjcvNn579-0VR82JtXK1f8HCv9l0JHq2h3hxX6iPQVHdKq9i8ZU_gkrzZVl626GF9HEdTOCqCvh1wIeBm0xCCNbaXScQ5aY6G8TDy2nCdkGU8j8SJTOmZUXgACzHxqjEjE2tBGl3g5FW3k-IEdH4IwMkcDeB3Z1rQd5ytCDUA4pMdSkIHRwBNRpEFA54pYmiibROc1APCvWMc1RQYnq1LwkoMpcdA5nmxT7dLCZo9jfMpuVx9UCoe5ohS8Q8o-9-Flba_pmicdco11NAbSnCEbMQXXBGx3_bw7OJBXVMwJMlOhHyA1eExSrCRmdIvd9EAJuV66ihjvgeIvomUrYR1YdxsoqNQZLFsYqDzk5sLli8L1MrJAFkPIMzw8tIrZTetIgStf7HlzdHfucY4Cg-k-2y0)
+  - Biểu đồ package mô tả kiến trúc : 
+    ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bT1Od9sOdggWf9pJcPgNecIGZMNWa9qU6gIWbDHVdbnQb4iLoqNGbLmQb5PQX5KbME0Poo8TYejpinBBIvMyCbFpqn6rU2IM9AOb5YS2jKIa5W2iaOXA3KvloYb6ApTEISpBpCvCKS1f1Qi6yL-1LrTEwXTO1B2HxSJNG2Y2iCwxChGNE2GcfTIcfi30000__y30000)
    - Các cơ chế phân tích:
      + Yêu cầu hệ thống:
        - Tính khả dụng:
@@ -60,27 +61,72 @@
        - Tất cả thông tin được lưu giữ tuân thủ các tiêu chuẩn bảo mật và quy định của hệ thống y tế Mid-Scotland.
    - Kết quả phân tích từng ca sử dụng:
      + ### **Quản lý chắm sóc cá nhân**:
-       - Brief Description: Ca sử dụng này cho phép nhân viên lâm sàng quản lý thông tin bệnh nhân, bao gồm tạo hồ sơ mới, chỉnh sửa thông tin, và xem lịch sử điều trị.
-       - Flow of Events:
-         + Basic Flow:
-           - Nhân viên lâm sàng đăng nhập vào hệ thống.
-           - Hệ thống hiển thị giao diện tìm kiếm hồ sơ bệnh nhân.
-           - Nhân viên lâm sàng tìm kiếm hoặc chọn một bệnh nhân từ danh sách.
-           - Nhân viên lâm sàng xem, chỉnh sửa thông tin, hoặc tạo hồ sơ bệnh nhân mới.
-           - Hệ thống xác nhận thay đổi và lưu vào cơ sở dữ liệu.
-         + Alternative Flows:
-           - AF1: Không tìm thấy bệnh nhân: Nếu không có kết quả tìm kiếm, nhân viên lâm sàng được thông báo và có thể tạo hồ sơ bệnh nhân mới.
-           - AF2: Dữ liệu không hợp lệ: Nếu thông tin nhập vào không đúng định dạng, hệ thống hiển thị thông báo lỗi và yêu cầu sửa.
-       - Special Requirements:
-         + Phải xác thực thông tin đăng nhập của nhân viên.
-         + Dữ liệu nhập phải được kiểm tra định dạng và tính hợp lệ.
-       - Pre-Conditions:
-         + Nhân viên lâm sàng đã đăng nhập thành công vào hệ thống.
-         + Cơ sở dữ liệu bệnh nhân khả dụng.
-       - Post-Conditions:
-         + Hồ sơ bệnh nhân được tạo mới hoặc cập nhật.
-         + Các thay đổi được lưu trữ an toàn trong cơ sở dữ liệu.
-       - Extension Points: Tích hợp hệ thống hồ sơ quốc gia: Khi tạo hoặc chỉnh sửa hồ sơ, hệ thống có thể gửi thông tin tóm tắt đến hệ thống hồ sơ bệnh án quốc gia.
+#### 1. Xác định các lớp phân tích
+
+Dựa trên yêu cầu của hệ thống Mentcare, các lớp phân tích cho ca sử dụng "Quản lý chăm sóc cá nhân" bao gồm:
+
+- **Patient**: Lớp đại diện cho bệnh nhân.
+- **ClinicalStaff**: Lớp đại diện cho nhân viên lâm sàng.
+- **Consultation**: Lớp đại diện cho buổi tư vấn.
+- **PatientRecord**: Lớp đại diện cho hồ sơ bệnh nhân.
+- **Diagnosis**: Lớp đại diện cho chẩn đoán.
+- **Treatment**: Lớp đại diện cho phương pháp điều trị.
+- **Medication**: Lớp đại diện cho thuốc được kê đơn.
+- **Referral**: Lớp đại diện cho việc giới thiệu bệnh nhân đến các bộ phận khác.
+
+#### 2. Mô tả hành vi thông qua biểu đồ sequence
+
+Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "Quản lý chăm sóc cá nhân":
+
+![diagram](https://www.planttext.com/plantuml/png/b98nJiD044NxFSM8dWkaG4XEIQJ8kA3TE4vs5NjihSVfgIYe8aH5Wq4KH22bzXOfDl8zvWHS0SKeWYM0IFtVznjh_vjTdvOa3LLPAcHCkO4WrQXZcPwJd4n48GtfM1SI2Ow6adI252PnRiP784iOXZuHv5XMAKdIENP0uETzBQUObxhimhuVHYQHb2L8NHZvuI0Pw_ZpkmC_3PD9OenCkomKmli9E3w1OTY3oBraCDFSh3DGR6-WR6iOiRr21QZS0ufXk6MzSWyYmyqZpDbU_jBQjmKzYBYfSnXLR6yrKBk2EJTF21dREos2tKbdsYqHPjoiQP-TRzb_E_izY9HRPX0hRfuHDelSrIZwErN0pMi1gBXv9P-1kRlF_-s9Tfv2jQksnYaKojK5R1QQxMK5PDXUY-X7xL-LmwuOxAuWLR5Tn31pIzWisXh5u4SrVUSEystdq_cckdiLKfhjLIMwmUp9VEWmKpUBTbKTCj4BLySVReJqQrUS9ZYkilGT003__mC0)
+
+#### 3. Xác định nhiệm vụ của từng lớp phân tích
+
+- **Patient**: Lưu trữ thông tin cá nhân của bệnh nhân như tên, địa chỉ, ngày sinh, liên hệ gia đình.
+- **ClinicalStaff**: Quản lý thông tin nhân viên lâm sàng và thực hiện các thao tác trên hồ sơ bệnh nhân.
+- **Consultation**: Quản lý thông tin về buổi tư vấn, bao gồm ngày giờ, nhân viên lâm sàng tham gia, và các ghi chú tư vấn.
+- **PatientRecord**: Lưu trữ toàn bộ thông tin về bệnh nhân, bao gồm chẩn đoán, phương pháp điều trị, thuốc kê đơn, và giới thiệu.
+- **Diagnosis**: Quản lý thông tin về các chẩn đoán bệnh của bệnh nhân.
+- **Treatment**: Quản lý thông tin về các phương pháp điều trị được áp dụng cho bệnh nhân.
+- **Medication**: Quản lý thông tin về các loại thuốc được kê đơn cho bệnh nhân.
+- **Referral**: Quản lý thông tin về việc giới thiệu bệnh nhân đến các bộ phận khác.
+  
+#### 4. Xác định một số thuộc tính và quan hệ giữa các lớp phân tích
+
+- **Patient**
+  - Thuộc tính: patientID, name, address, dateOfBirth, contactDetails, familyContacts
+  - Quan hệ: 1 Patient có nhiều PatientRecord
+
+- **ClinicalStaff**
+  - Thuộc tính: staffID, name, role, contactDetails
+  - Quan hệ: 1 ClinicalStaff có nhiều Consultation
+
+- **Consultation**
+  - Thuộc tính: consultationID, date, time, notes
+  - Quan hệ: 1 Consultation thuộc về 1 PatientRecord, 1 Consultation có nhiều ClinicalStaff
+
+- **PatientRecord**
+  - Thuộc tính: recordID, patientID, riskAssessment
+  - Quan hệ: 1 PatientRecord có nhiều Diagnosis, Treatment, Medication, Referral
+
+- **Diagnosis**
+  - Thuộc tính: diagnosisID, condition, date, comments
+  - Quan hệ: 1 Diagnosis thuộc về 1 PatientRecord
+
+- **Treatment**
+  - Thuộc tính: treatmentID, method, date, comments
+  - Quan hệ: 1 Treatment thuộc về 1 PatientRecord
+
+- **Medication**
+  - Thuộc tính: medicationID, drugName, dosage, date, comments
+  - Quan hệ: 1 Medication thuộc về 1 PatientRecord
+
+- **Referral**
+  - Thuộc tính: referralID, department, date, comments
+  - Quan hệ: 1 Referral thuộc về 1 PatientRecord
+#### 5. Biểu đồ lớp mô tả lớp phân tích và giải thích
+
+![diagram](https://www.planttext.com/plantuml/png/d5CvRiCm4Epr2a9b01j9wyg9rQJ80TiVM90hcGWFWxigWY0lIv4dvGi1JSiI5Lj0t6cMWvazHZzVtqjY2DnQKqW3HE8LMADZyL488VO9F5OBiU6WNHEB3YmECIWLa6XOKi3uKZ_emBk5g80n5gLt398hPD0cezTWjNbVfVV-vRCuzhGosca9PiDGrwapYf_JVGLlCdp1ltVnZbh3mDgxP287bTmh3jXFnZewRxKz8ESPpyWV5xj6wODA-k7mdIkVNNdGz7PFX4GM7V_LhZGqpfEcfAiwcAj8xvIEiroUH7eR7Swqlmq87D-I1NSmjx38Ew-kqNz2fULWz_Q4HviFRVCykhJo10rUuxh66aC0qzqZeP4ZxY4SPlsVG_SdbNUbcCr4UJkVtvHv38eysJbpDKXVaOLpn1jgTAx7c4qeJX5FUPfadI8noUeFEqdhBb4iqQdMcby0003__mC0)
      + ### **Theo dõi bệnh nhân:**
         1. Các lớp phân tích:
            - Hồ sơ bệnh nhân : Quản lý thông tin cá nhân, lịch sử điều trị, và lịch hẹn của bệnh nhân.
