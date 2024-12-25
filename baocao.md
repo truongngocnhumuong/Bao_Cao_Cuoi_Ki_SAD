@@ -190,7 +190,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
          CaseRecord (Hồ sơ vụ việc): Quản lý thông tin chi tiết về trường hợp của bệnh nhân.
          SystemAdmin (Quản trị viên hệ thống): Người quản lý và giám sát hệ thống.
        - Upper-Level layers and their dependentcies :
-        ![PlantText](https://www.planttext.com/plantuml/png/V9F1Qjmm54Nt-efBLkqYFv15IDf2EYIK5ZBGhU8nigX7urhIqA5aKRAOHLTPXzAMOGXjCPD5DxKeMJZCVxmlw2yKQUpKpfXwPQ5xzSvzJ_hZRW-quRcnuvHbF7h3HOoTbtciOsMuaHE54pwBSpmwado2aIGtLuzty9u1KSgrnd0G5lvxBibTA9Y4t4UCoAsGUhsjjryaL1OATvTKNbjCgoyJ678_eCJwXjmdYL7rIma6dBDpzW_cCCjI6TKi4o6ZXcYp8FTD2LzjgKG7x8dLKiLQRsGDusjo1TBgDvH8F5o6ARbblNdi0unXSWvJ5If1GcwH8IKtxydpoivWg5n549AF8IIvrHRzCsuu3gCerhhXFitj316LHTO-jCFkNRMf0G-)
+        ![PlantText](https://www.planttext.com/plantuml/png/V9F1Qjmm54Nt-efBLkqYFv15IDf2EYIK5ZBGhU8nigX7urhIqA5aKRAOHLTPXzAMOGXjCPD5DxKeMJZCVxmlw2yKQUpKpfXwPQ5xzSvzJ_hZRW-quRcnuvHbF7h3HOoTbtciOsMuaHE54pwBSpmwado2aIGtLuzty9u1KSgrnd0G5lvxBibTA9Y4t4UCoAsGUhsjjryaL1OATvTKNbjCgoyJ678_eCJwXjmdYL7rIma6dBDpzW_cCCjI6TKi4o6ZXcYp8FTD2LzjgKG7x8dLKiLQRsGDusjo1TBgDvH8F5o6ARbblNdi0unXSWvJ5If1GcwH8IKtxydpoivWg5n549AF8IIvrHRzCsuu3gCerhhXFitj316LHTO-jCFkNRMf0G-kAPLBXMZz5PhSvnwcC2KZgRmDmQwaXx_g5Ef5FECwRlYUzXo_HHSC3Tl9-iR2v5xUyi0arS_xNb6vKA7nP_vF-FdZhUNAztZUC0q7sDtTVp2wFHoHAoHcrNVh-tPjMLVWBQsERUlHZjzIDiOGPg_TOa-t6P7ojzO4Lv1j5JlDgLpuPd_uNvc7aVfTkBki5dXNtz6UcCF1VRokZTm5_8LktXyxYDN8Fsh66FiB003__mC0)
        - Layer Definitions :
            + Lớp giao diện (Presentation Layer - UI/UX):
               - Mục đích: Cung cấp giao diện người dùng để các nhân viên y tế, quản trị viên hệ thống và nhân viên hỗ trợ tương 
