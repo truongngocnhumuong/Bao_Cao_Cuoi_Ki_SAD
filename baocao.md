@@ -87,8 +87,8 @@
              + Thuộc tính:
                - ID bệnh nhân: String
                - tên: String
-               - Lịch sử điều trị: List<DieuTri>
-               - Cuộn hẹn: List<CuocHen>
+               - Lịch sử điều trị: List <DieuTri>
+               - Cuộn hẹn: List <CuocHen>
              + Nhiệm vụ: Cung cấp thông tin về lịch sử điều trị và lịch hẹn để kiểm tra tuân thủ.
            - Trình theo dõi điều trị: Kiểm tra và phát hiện các vấn đề liên quan đến tuân thủ điều trị.
              + Thuộc tính: Tần suất kiểm tra: int
@@ -113,20 +113,20 @@
         3. Biểu đồ lớp:
            ![Diagram](https://www.planttext.com/plantuml/png/XLEzJiCm4DuhzHsiJa6qBn2XgYePEaGiYTXDOiKd4XibDX92p0myHK6CY8M5PkoJv4suf7RpKw9ck_k-ptVVtMLLA9ehdQNJIPJIeY0R6SWr4_o6Kq6UfnE2toN9gCsv950vYCGYYfsaKeXue3rWEip19JuKwif4oovdKqiRr3z4BKgV_EuZpiNOCmSYQe-KzgsNwSIwGetW8MVIaz2wKbG4cYgJTma8PQ5xO5cOqr3ltqN8jSDnB6vlEBRUDHLyJMM_dabs1sXIms492PuMoGYQIWeZaABI84x48GIcB6FUo6o4VHgULIRQlkd4zGfgDxV0X4-pW3Q2Hmbnpy-0qlLbeM5_BAEGdhX5yh5hwyia_gkxOI6N8Z4xRSl6siTByCyTaTUbZLr8x-8NYsN_M5moYt0_9AfsdmyahifllDsgVDKpLFQxEwDDg_8jueHNkr-1uXwpbjgRGPMgTbjPopu49tVxhKI-XMlgS1qeIQho2uZY-n-CZMJ5HDpysdy0)
         - Giải thích:
-          + PatientRecord: Là nguồn dữ liệu chính, cung cấp lịch sử điều trị và lịch hẹn để kiểm tra tuân thủ.
-          + TreatmentMonitor:
+          + Hồ sơ bệnh nhân: Là nguồn dữ liệu chính, cung cấp lịch sử điều trị và lịch hẹn để kiểm tra tuân thủ.
+          + Trình theo dõi điều trị:
             - Lớp chính thực hiện chức năng kiểm tra hồ sơ bệnh nhân.
-            - Tương tác với PatientRecord và AppointmentSystem để lấy dữ liệu cần thiết.
+            - Tương tác với Hồ sơ bệnh nhân và Hệ thống lịch hẹn để lấy dữ liệu cần thiết.
             - Tạo cảnh báo thông qua lớp Alert.
            
-          + Alert: Quản lý thông tin cảnh báo và gửi đến ClinicalStaff.
-          + ClinicalStaff: Nhận thông báo và thực hiện các hành động cần thiết.
-          + AppointmentSystem: Hỗ trợ đối chiếu lịch hẹn, đảm bảo kiểm tra đầy đủ thông tin.  
+          + Cảnh báo: Quản lý thông tin cảnh báo và gửi đến Nhân viên lâm sàng.
+          + Nhân viên lâm sàng: Nhận thông báo và thực hiện các hành động cần thiết.
+          + Hệ thống lịch hẹn: Hỗ trợ đối chiếu lịch hẹn, đảm bảo kiểm tra đầy đủ thông tin.  
         4. Quan hệ giữa các lớp:
-          - PatientRecord và TreatmentMonitor: Quan hệ kết hợp (association): TreatmentMonitor sử dụng dữ liệu từ PatientRecord.
-          - TreatmentMonitor và Alert: Quan hệ tạo (dependency): TreatmentMonitor tạo cảnh báo thông qua Alert.
-          - Alert và ClinicalStaff: Quan hệ giao tiếp: Alert gửi thông báo đến ClinicalStaff.
-          - TreatmentMonitor và AppointmentSystem: Quan hệ tích hợp: TreatmentMonitor lấy dữ liệu lịch hẹn từ AppointmentSystem.
+          - Hồ sơ bệnh nhân và Trình theo dõi điều trị: Quan hệ kết hợp: Trình theo dõi điều trị sử dụng dữ liệu từ Hồ sơ bệnh nhân.
+          - Trình theo dõi điều trị và Cảnh báo: Quan hệ tạo: Trình theo dõi điều trị tạo cảnh báo thông qua Cảnh báo.
+          - Cảnh báo và Nhân viên lâm sàng: Quan hệ giao tiếp: Cảnh báo gửi thông báo đến Nhân viên lâm sàng.
+          - Trình theo dõi điều trị và Hệ thống lịch hẹn: Quan hệ tích hợp: Trình theo dõi điều trị lấy dữ liệu lịch hẹn từ Hệ thống lịch hẹn.
            
              
              
