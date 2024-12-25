@@ -1,6 +1,5 @@
-# BÁO CÁO CUỐI KÌ 
-## Mentcare: A mental health support system
-1. Mô tả tóm tắt bài toán: Cơ quan y tế khu vực Mid-Scotland muốn mua một hệ thống thông tin để giúp quản lý việc chăm sóc bệnh nhân mắc các vấn đề về sức khỏe tâm thần. Mục tiêu chung của hệ thống là:
+# BÁO CÁO CUỐI KÌ Mentcare: A mental health support system
+## 1. Mô tả tóm tắt bài toán: Cơ quan y tế khu vực Mid-Scotland muốn mua một hệ thống thông tin để giúp quản lý việc chăm sóc bệnh nhân mắc các vấn đề về sức khỏe tâm thần. Mục tiêu chung của hệ thống là:
    - Cung cấp thông tin quản lý tốt hơn về chăm sóc sức khỏe tâm thần trong khu vực.
    - Cung cấp hệ thống hồ sơ được cải thiện cho đội ngũ nhân viên lâm sàng tham gia chẩn đoán và điều trị.
    - *Chú ý: Hệ thống không nhằm mục đích là hệ thống hồ sơ y tế hoàn chỉnh, nơi lưu giữ mọi thông tin về quá trình điều trị y tế của bệnh nhân. Hệ thống chỉ nhằm mục đích hỗ trợ chăm sóc sức khỏe tâm thần (ví dụ:nếu bệnh nhân mắc một số tình trạng không liên quan khác, chẳng hạn như huyết áp cao, tình trạng này sẽ không được ghi nhận chính thức trong hệ thống). Do đó, hệ thống phải tương tác và chia sẻ thông tin với các hệ thống hồ sơ bệnh nhân khác đang được sử dụng.*(ở phần 1.Introduction)
@@ -36,10 +35,15 @@
        - Đảm bảo hệ thống hoạt động mượt mà với thời gian phản hồi nhanh chóng.
        - Khả năng xử lý lượng lớn dữ liệu và nhiều truy vấn cùng lúc.
       
-2. Phân tích các ca sử dụng: (Trang 4. Mục 1.1 System overview : The key features of the system are.....)
+## 2. Phân tích các ca sử dụng: (Trang 4. Mục 1.1 System overview : The key features of the system are.....)
    - Kiến trúc đề xuất: Mô hình triển khai : Kiến trúc máy khách-máy chủ.
      + Máy khách: Các nhân viên y tế và quản trị viên sẽ truy cập hệ thống qua trình duyệt web (Firefox) trên giao diện tương tác dạng biểu mẫu.
      + Máy chủ: Lưu trữ hồ sơ bệnh nhân và xử lý yêu cầu từ máy khách, được vận hành trên các máy chủ Linux.
+   - Lí do lựa chọn kiến trúc này vì :
+     + Phân quyền và bảo mật: Nhân viên y tế và quản trị viên cần quyền truy cập khác nhau vào dữ liệu; máy chủ quản lý quyền này.
+     + Tích hợp dễ dàng: Hệ thống phải tích hợp với các hệ thống bên ngoài như PRESCRIPTION và hồ sơ bệnh án quốc gia.
+     + Độ tin cậy cao: Các yêu cầu về tính khả dụng trong giờ làm việc và tính bảo mật phù hợp với kiến trúc máy khách-máy chủ.
+   - Biểu đồ package mô tả kiến trúc : ![PlantText](https://www.planttext.com/plantuml/png/XPFVQy8m4CVV2_qVZZufG_Rkmx1kE0SEdDNjEQOt3Qj9bnzkClpVT-caT4tLK6Z9VUxolUyr8sEPjcvNn579-0VR82JtXK1f8HCv9l0JHq2h3hxX6iPQVHdKq9i8ZU_gkrzZVl626GF9HEdTOCqCvh1wIeBm0xCCNbaXScQ5aY6G8TDy2nCdkGU8j8SJTOmZUXgACzHxqjEjE2tBGl3g5FW3k-IEdH4IwMkcDeB3Z1rQd5ytCDUA4pMdSkIHRwBNRpEFA54pYmiibROc1APCvWMc1RQYnq1LwkoMpcdA5nmxT7dLCZo9jfMpuVx9UCoe5ohS8Q8o-9-Flba_pmicdco11NAbSnCEbMQXXBGx3_bw7OJBXVMwJMlOhHyA1eExSrCRmdIvd9EAJuV66ihjvgeIvomUrYR1YdxsoqNQZLFsYqDzk5sLli8L1MrJAFkPIMzw8tIrZTetIgStf7HlzdHfucY4Cg-k-2y0)
    - Các cơ chế phân tích:
      + Yêu cầu hệ thống:
        - Tính khả dụng:
