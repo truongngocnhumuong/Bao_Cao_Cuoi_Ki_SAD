@@ -128,8 +128,9 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
 #### 5. Biểu đồ lớp mô tả lớp phân tích và giải thích
 
 ![diagram](https://www.planttext.com/plantuml/png/d5CvRiCm4Epr2a9b01j9wyg9rQJ80TiVM90hcGWFWxigWY0lIv4dvGi1JSiI5Lj0t6cMWvazHZzVtqjY2DnQKqW3HE8LMADZyL488VO9F5OBiU6WNHEB3YmECIWLa6XOKi3uKZ_emBk5g80n5gLt398hPD0cezTWjNbVfVV-vRCuzhGosca9PiDGrwapYf_JVGLlCdp1ltVnZbh3mDgxP287bTmh3jXFnZewRxKz8ESPpyWV5xj6wODA-k7mdIkVNNdGz7PFX4GM7V_LhZGqpfEcfAiwcAj8xvIEiroUH7eR7Swqlmq87D-I1NSmjx38Ew-kqNz2fULWz_Q4HviFRVCykhJo10rUuxh66aC0qzqZeP4ZxY4SPlsVG_SdbNUbcCr4UJkVtvHv38eysJbpDKXVaOLpn1jgTAx7c4qeJX5FUPfadI8noUeFEqdhBb4iqQdMcby0003__mC0)
-     + ### **Theo dõi bệnh nhân:**
-        1. Các lớp phân tích:
+     
+### **Theo dõi bệnh nhân:**
+ 1. Các lớp phân tích:
            - Hồ sơ bệnh nhân : Quản lý thông tin cá nhân, lịch sử điều trị, và lịch hẹn của bệnh nhân.
              + Thuộc tính:
                - ID bệnh nhân: String
@@ -155,7 +156,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
              + Thuộc tính: Dữ liệu cuộc hẹn : List<CuocHen>
              + Nhiệm vụ: Cung cấp thông tin lịch hẹn để kiểm tra tuân thủ.
             
-        2. Biểu đồ sequence:
+    2. Biểu đồ sequence:
            ![PlantText](https://www.planttext.com/plantuml/png/ZLE_IiD06DyFxXq-EkdW2sIGqWeMMefWSRzUGkyWlIl9jU0e3XsSYfERgRY88g8E9eF3YUznR-ANDCMaLJJRST_lxtrfneP5PZeEAM7Sw0WQVM6N2cRItYa8xN8CiRrMemQm6Fg2gHCPA4ec299SJfWoq1X4zbu9C2BGuDjN2HyBwRApAPZ8PHS5SX199GOuSA3b1hhZiak8FnCOkcoED2hNBq0TVQnRWHAvx3PeZe8kMwWHXAZ21GYNlgs0FSb5PyjcswKto3-qYIwcsao95jEK5D7bZ9bWmsVr17lxDKCUz5nwUuecx0jwC5AXWH-IK595mHxIL6azFA4lc65XuBli4KBiRZxTuDZsKcRqe8lpvsFicjMAeAIS-Bza7OwjX0QEX4qCY7m0bm8JAtnT1582-6sQAYj51PSc6lXtux33XSIMNFfkgZoxAw8Ic7Eibyo3GvSzo7N11Kc5a98WZ0FehcwvVVxRNRs44falqHDV9nIuwwBWk58Zb50-9NxmoteqyRhuSxu0)
         3. Biểu đồ lớp:
            ![Diagram](https://www.planttext.com/plantuml/png/XLEzJiCm4DuhzHsiJa6qBn2XgYePEaGiYTXDOiKd4XibDX92p0myHK6CY8M5PkoJv4suf7RpKw9ck_k-ptVVtMLLA9ehdQNJIPJIeY0R6SWr4_o6Kq6UfnE2toN9gCsv950vYCGYYfsaKeXue3rWEip19JuKwif4oovdKqiRr3z4BKgV_EuZpiNOCmSYQe-KzgsNwSIwGetW8MVIaz2wKbG4cYgJTma8PQ5xO5cOqr3ltqN8jSDnB6vlEBRUDHLyJMM_dabs1sXIms492PuMoGYQIWeZaABI84x48GIcB6FUo6o4VHgULIRQlkd4zGfgDxV0X4-pW3Q2Hmbnpy-0qlLbeM5_BAEGdhX5yh5hwyia_gkxOI6N8Z4xRSl6siTByCyTaTUbZLr8x-8NYsN_M5moYt0_9AfsdmyahifllDsgVDKpLFQxEwDDg_8jueHNkr-1uXwpbjgRGPMgTbjPopu49tVxhKI-XMlgS1qeIQho2uZY-n-CZMJ5HDpysdy0)
