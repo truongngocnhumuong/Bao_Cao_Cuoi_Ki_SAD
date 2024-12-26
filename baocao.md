@@ -254,24 +254,61 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
       ![PlantText](https://www.planttext.com/plantuml/png/h9J1Qjim6CVlUee_FMs7la0Wet4CIy2Cm1hOLLKzIyoHKqiUv0bws6LZXnrNjuT1MEaEFTcC7bJo7dg2lSAGab2xYJiAkndq-_xwlfy-_AU-ErAQvhgOfOGodUKOnJJLV4ZpU99dxsEbH2Pf2gem6ax8dEPQC36dKkFWxKBfU8ONq_7B0mTCn-tpe512naeXoXB1F194RIIaccB0cAVe8iuz5GxsO2TKnUlJW91-7u6jRZJklzZgHu6pOW6Tcv-Iezyde-44Xwym7VVmXjlgUWxDpQrCe8N4YQtF9OVavbAIwTY1GTJ3QrjV2opCiW3paTfMPGPkwwzGgx9T5aIkB1n4FKIhNqLdV3XOWq4FnzmiPrqWFfgB36nLGjdwEqvjVODKsFgy8660m-rTxqp98Dr44kdctWl9mLpe-hBDDCUvhQxmmLPt6cU5-tQyxtiZffdrQDHMgbDz_zcKaYCHfeJsadLkgr8cso7QpeTUkSzs3zHHk-E-GUu8RgPuL_lVfU6xrSJ3Q7aca-U9PesWVpXkeHsk_RirHtM28xEKI6tzYN7NwpVdgBw2DfSpfERt8x_xwQTsENse84_ixcvcbz0v5owoqUlpDxXfQzlSV_3RaDDUvADOdhh_727aBm000F__0m00)
      
      + ### **Báo cáo hành chính:**
-       - Brief Description: Tạo các báo cáo ẩn danh hàng tháng về số lượng bệnh nhân, chi phí điều trị, và các chỉ số quản lý.
-       - Flow of Events:
-         + Basic Flow:
-           - Quản trị viên chọn loại báo cáo cần tạo.
-           - Hệ thống thu thập dữ liệu liên quan và tạo báo cáo.
-           - Báo cáo được lưu trữ và sẵn sàng để tải xuống hoặc in.
-         + Alternative Flows: AF1: Không đủ dữ liệu:
-           - Nếu không đủ dữ liệu để tạo báo cáo, hệ thống hiển thị thông báo và yêu cầu kiểm tra lại.
-       - Special Requirements:
-         + Báo cáo phải ẩn danh để bảo vệ thông tin cá nhân bệnh nhân.
-         + Thời gian xử lý báo cáo không quá 10 giây.
-       - Pre-Conditions:
-         + Dữ liệu liên quan đã được ghi nhận đầy đủ trong hệ thống.
-         + Quản trị viên có quyền tạo báo cáo.
-       - Post-Conditions:
-         + Báo cáo được lưu trữ và sẵn sàng để sử dụng.
-         + Hệ thống ghi lại lịch sử tạo báo cáo.
-       - Extension Points: Tích hợp với hệ thống quản lý cấp cao: Các báo cáo có thể được chia sẻ trực tiếp với quản lý cấp cao qua email.
+      ### **Báo cáo hành chính:**
+ 1. Xác định các lớp phân tích:
+    - **Quản lý báo cáo**: Chịu trách nhiệm điều phối quá trình tạo báo cáo.
+      + Thuộc tính: loaiBaoCao: String
+      + Nhiệm vụ:
+        - Thu thập dữ liệu liên quan.
+        - Gọi các lớp hỗ trợ để xử lý và lưu trữ báo cáo.
+    - **Thu thập dữ liệu**: Chịu trách nhiệm thu thập dữ liệu từ cơ sở dữ liệu.
+      + Thuộc tính: duLieuLienQuan: List<Object>
+      + Nhiệm vụ: Lấy dữ liệu từ các bảng cần thiết trong cơ sở dữ liệu.
+    - **Báo cáo:** Lưu trữ thông tin báo cáo đã tạo.
+      + Thuộc tính:
+        - maBaoCao: String
+        - noiDungBaoCao: String
+        - thoiGianTao: Date
+      + Nhiệm vụ:
+        - Lưu trữ thông tin báo cáo.
+        - Cho phép tải xuống hoặc in.  
+    - **Quản trị viên**: Người khởi tạo quá trình tạo báo cáo.
+      + Thuộc tính: maQuanTri: String
+      + Nhiệm vụ: Chọn loại báo cáo và khởi chạy quy trình tạo báo cáo.
+    - **Ghi nhật ký**: Ghi lại lịch sử tạo báo cáo.
+      + Thuộc tính: lichSuTaoBaoCao: List<String>
+      + Nhiệm vụ: Lưu thông tin về báo cáo đã được tạo.
+     
+ 2. Biểu đồ sequence:
+
+
+![PlantText](https://www.planttext.com/plantuml/png/RP8nQiCm68LtWUxmo9uBP2WXANHeA0Hy0TKEaQWhEROKoDYfG-aT6Zgr4BgqYqKcdKGtgUmaTknaiOtyllU_zzlZGhDSc-UK4XPhbMCmDxxybD2vjszO2_Sj1s05veR9A1UKP44lOf4ngHjnwlPuT5k5E5mQ-MmpOMhAL8-9k87cljnbIBpzGIgyVJKr5Lv5d6MtPYOMfeTDElvNdU-uWAoSDPxSljQ5emVEzFs64agE7J2ywUGROSgzVGyrb2-tecro84wo2ki47E5wbN0BMyCgi9Hq20mlHaTvs23MthwSMvpIdizkY11IjI7Xoo-9X4b-YJJjHzKZqhfU6Zvip55ukuFkUlKTZcd3pggkxbSk3zfsUE7BFud2VSWb9UE5JEfVwHy0)
+
+ 3. Biểu đồ lớp:
+
+
+![Diagram](https://www.planttext.com/plantuml/png/VL8zJyCm4DqZvJzOdOfG_q24ga8ZTQ20e1rOhqaK7tLjbDX84M9cu4SW1aR4tepy4lyJhirt6x1aB_VklNVlF4ar9DfiXEi40jAKtKMFAj5N826E4lRiEepEAHCAy0BK59J75Zf16LSL3Qee38yn9rx9vpelhbD9-A1XgeI80grQ4g6POxIxyjQ0zDWSKtrsiteWsBYs0Pc_X_MBTLjQaeMBHci3_SD8XRwHyH-JSeKp1BdSbMY8g7PbJ1a1UNXI63RPuBrH5LzJRJax3pSesyPsmoyJF1HVa_Zo_wYFkKs8UgxYxYOnu0jJKvMX5IHrpZ77QmxwCXiU9jNLwVwMqMXyi5oF3OJTVcOijFatITlyrGpwsie54LxRxOTYgnzw0dfwqUt1g8NSCc7pju2prEPVr5AasX1NpGHUSvk_8miuwMG4dKGotF__Nm00)
+
+4. Giải thích biểu đồ lớp:
+   - Quản lý báo cáo:
+     + Lớp chính điều phối việc tạo báo cáo.
+     + Tương tác với lớp Thu thập dữ liệu để thu thập dữ liệu và Report để tạo báo cáo.
+   - Thu thập dữ liệu:
+     + Lấy dữ liệu liên quan từ cơ sở dữ liệu.
+     + Đảm bảo dữ liệu đầy đủ để tạo báo cáo.
+   - Báo cáo:
+     + Lưu trữ thông tin báo cáo ẩn danh.
+     + Cung cấp các phương thức tải xuống và lưu báo cáo.
+   - Quản trị viên:
+     + Người khởi tạo quy trình tạo báo cáo.
+     + Tương tác với Quản lý báo cáo để yêu cầu tạo báo cáo.
+   - Ghi nhật ký: Ghi lại các hoạt động tạo báo cáo để phục vụ kiểm tra và truy vết.
+6. Mối quan hệ giữa các lớp:
+   - Quản trị viên và Quản lý báo cáo: Quan hệ gọi: Quản trị viên khởi chạy quá trình tạo báo cáo thông qua Quản lý báo cáo.
+   - Quản lý báo cáo và Thu thập dữ liệu: Quan hệ kết hợp: Quản lý báo cáo yêu cầu Thu thập dữ liệu thu thập dữ liệu.
+   - Quản lý báo cáo và Báo cáo: Quan hệ tạo: Quản lý báo cáo chịu trách nhiệm tạo và quản lý đối tượng Báo cáo.
+   - Quản lý báo cáo và Ghi nhật ký: Quan hệ gọi: Quản lý báo cáo ghi lịch sử vào Ghi nhật ký.
+
      
 ### **Quản lý dịch vụ y tế (Health Service Management):**     
    1 **Xác định các lớp phân tích** 
