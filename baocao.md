@@ -275,23 +275,27 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
        - Extension Points: Tích hợp với hệ thống quản lý cấp cao: Các báo cáo có thể được chia sẻ trực tiếp với quản lý cấp cao qua email.
      
 ### **Quản lý dịch vụ y tế (Health Service Management):**     
-   1 **Xác định các lớp phân tích**
-      - **HealthServiceManager:** Đại diện cho quản lý dịch vụ y tế, yêu cầu và nhận báo cáo.
-      - **ReportGenerator:** Xử lý yêu cầu, tạo báo cáo dựa trên dữ liệu hệ thống.
-      - **PatientDataRepository:** Quản lý dữ liệu bệnh nhân, cung cấp dữ liệu cần thiết cho báo cáo.
-      - **DrugDataRepository:** Quản lý dữ liệu về thuốc, cung cấp thông tin về chi phí và số lượng thuốc được kê đơn
+   1 **Xác định các lớp phân tích** 
+   - **HealthServiceManager:** Đại diện cho quản lý dịch vụ y tế, yêu cầu và nhận báo cáo.
+   - **ReportGenerator:** Xử lý yêu cầu, tạo báo cáo dựa trên dữ liệu hệ thống.
+   - **PatientDataRepository:** Quản lý dữ liệu bệnh nhân, cung cấp dữ liệu cần thiết cho báo cáo.
+   - **DrugDataRepository:** Quản lý dữ liệu về thuốc, cung cấp thông tin về chi phí và số lượng thuốc được kê đơn
 
    2 **Nhiệm vụ của từng lớp phân tích**
-        **HealthServiceManager (Trình quản lý dịch vụ sức khỏe) :**  
-            - Gửi yêu cầu báo cáo.  
-            - Nhận và phân tích thông tin từ báo cáo để ra quyết định.  
-         **ReportGenerator (Báo cáoGeneratorn) :**  
-            - Xử lý yêu cầu báo cáo.  
-            - Thu thập dữ liệu từ các nguồn và tổng hợp thành báo cáo.  
-         **PatientDataRepository (Kho lưu trữ dữ liệu bệnh nhân)**  
-            - Cung cấp thông tin tổng hợp về bệnh nhân, bao gồm số lượng bệnh nhân được điều trị.  
-         **DrugDataRepository (Kho dữ liệu thuốc)**  
-            - Cung cấp thông tin về loại thuốc được kê đơn, số lượng và chi phí.
+   
+- **HealthServiceManager (Trình quản lý dịch vụ sức khỏe)**
+  + Gửi yêu cầu báo cáo.
+  + Nhận và phân tích thông tin từ báo cáo để đưa ra quyết định.
+
+ - **ReportGenerator (Bộ tạo báo cáo)**
+     + Xử lý yêu cầu báo cáo.
+     + Thu thập dữ liệu từ các nguồn và tổng hợp thành báo cáo.
+
+ - **PatientDataRepository (Kho lưu trữ dữ liệu bệnh nhân)**
+     + Cung cấp thông tin tổng hợp về bệnh nhân, bao gồm số lượng bệnh nhân được điều trị.
+
+- **DrugDataRepository (Kho dữ liệu thuốc)**
+     + Cung cấp thông tin về loại thuốc được kê đơn, số lượng và chi phí.
 
    3 **Biểu đồ sequence :**
 
