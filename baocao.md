@@ -195,66 +195,68 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
 
 ![Diagram](https://www.planttext.com/plantuml/png/XLEzJiCm4DuhzHsiJa6qBn2XgYePEaGiYTXDOiKd4XibDX92p0myHK6CY8M5PkoJv4suf7RpKw9ck_k-ptVVtMLLA9ehdQNJIPJIeY0R6SWr4_o6Kq6UfnE2toN9gCsv950vYCGYYfsaKeXue3rWEip19JuKwif4oovdKqiRr3z4BKgV_EuZpiNOCmSYQe-KzgsNwSIwGetW8MVIaz2wKbG4cYgJTma8PQ5xO5cOqr3ltqN8jSDnB6vlEBRUDHLyJMM_dabs1sXIms492PuMoGYQIWeZaABI84x48GIcB6FUo6o4VHgULIRQlkd4zGfgDxV0X4-pW3Q2Hmbnpy-0qlLbeM5_BAEGdhX5yh5hwyia_gkxOI6N8Z4xRSl6siTByCyTaTUbZLr8x-8NYsN_M5moYt0_9AfsdmyahifllDsgVDKpLFQxEwDDg_8jueHNkr-1uXwpbjgRGPMgTbjPopu49tVxhKI-XMlgS1qeIQho2uZY-n-CZMJ5HDpysdy0)
        
- + ### **Quản lý giam giữ bắt buộc:**
-   - Key Abstractions :
+### **Quản lý giam giữ bắt buộc:**
+   1. Xác định các lớp phân tích:
+      - Hồ sơ giam giữ: Quản lý thông tin về giam giữ của bệnh nhân.
+        + Thuộc tính:
+          - maGiamGiu: String 
+          - ngayGiamGiu: Date 
+          - lyDo: String 
+          - trangThai: String
+        + Nhiệm vụ: Lưu trữ và quản lý thông tin giam giữ.
+      - Quản lý giam giữ: Điều phối quá trình ghi nhận và cập nhật thông tin giam giữ.
+        + Thuộc tính: danhSachGiamGiu: List<DanhSanhGiamGiu>
+        + Nhiệm vụ:
+          - Xác minh tính hợp lệ của thông tin nhập vào.
+          - Lưu trữ thông tin giam giữ vào cơ sở dữ liệu.
+          - Gửi nhắc nhở về các cuộc kiểm tra định kỳ.
+      - Nhân viên lâm sàng: Người cập nhật thông tin giam giữ của bệnh nhân.
+        + Thuộc tính:
+          - maNhanVien: String
+          - ten: String
+        + Nhiệm vụ: Nhập thông tin giam giữ và gửi yêu cầu cập nhật.
+       
+      - Thông báo: Quản lý các thông báo nhắc nhở kiểm tra định kỳ.
+        + Thuộc tính:
+          - maThongBao: String 
+          - noiDungThongBao: String 
+          - ngayThongBao: Date 
+        + Nhiệm vụ: Gửi thông báo đến nhân viên lâm sàng.
+       
+      - Tuân thủ pháp luật: Đảm bảo hệ thống tuân thủ các quy định pháp lý.
+        + Thuộc tính: quyDinhHienHanh: String
+        + Nhiệm vụ: Kiểm tra tính hợp lệ của thông tin theo các quy định pháp luật.
+   3. Biểu đồ sequence:
+
+   ![PlantText](https://www.planttext.com/plantuml/png/XPAxQiCm58PtWz_X9tjUm4C9xP10GcXewAwwnX9nP3UM0faxTCXKEdHiBaCW459efvZIGINleJUfvE3MkPHwa8Kvtw_l7BcM2Z8GiX-v3l55F42bJTMCOyZKaYDIipvIDU5X1IH5cn9-pGBkEec1cCyImWKg7QatSrlyWP2Hlbbqjiw1ZYIyDQgRZtKc3wY6pfwGRgU7J2E-YayJNQhUUOWRDOtpoYwDUNXEuiCoQHiGL6SB95HD4qH6S2LovfAIf2M9S1tNATf1zMpVrCE50H9mQZaJbPyh62-vkiuUOZEAR0zDKt7VXnWG2BNY54PcRZnqzk0wHHcgn-SszUPJuCuE5BsV42jB8e7khqWv4EOvaYcDqKDh-oh_QkCaNOpMGrrdAvPFOktRL_PI4iFNeyx6fh-UpjvS9uZIe2pPsst_TIqkmaF3HkykRso9PuQXcc2abXA-tYmaKkDZ1XBmMzUfcJN_TRy1)
+
+
+   
+   4. Biểu đồ lớp:
+
+
+   ![Diagram](https://www.planttext.com/plantuml/png/XPF1Qi9048RlWk-mUB8KNq2AI17CGOHYw7rDmkvYCXkJNK5AJts4Fa2hFHGAugKdGq-1laVUf9FWQff4p6LX_vdPR-QV36D58wK3lzroV1h7nCgIr_XtmmGDcCYIFNbgjmX-joIWOxmS2zqdCnK9O4O0HjSdQKILPmH_FPBLO1LHO3QdeYhuMbjo9hitVRAImZNN3WsddAh_qdExPNWVT7Ru03_zQI1sAV0PTVW9RY9YTLVjS6325y8Bx8ZQN2AXW2xZ25cDHeQvbBv7mQGnBOgKUzfCEENf5bOY_KBARH2dxy3AGyNku55uK1jK_Geu3GtTiQUBa3KCcwVVmERfHfPVD-IrfwGOwToe2p9QVjRAdfUduUOjDBJVYASnJF4i-GnvkWbzj7MdpgHBlHu9u1OEoa9Ngpn7womPJhphlXNFDYnEhpUext-VT9P5AC7OpiMyPdvCNc38Iv3lFIcKAsNEBc4kovATGDkpmzx9Z-GDCvlsAKzjg8Wb7EG8YnA8euhgH0d0EaCFtEB7_mC0)
+
+
+   
+   5. Giải thích:
+      - Hồ sơ giam giữ: Lưu trữ thông tin chi tiết về giam giữ của bệnh nhân.
+      - Quản lý giam giữ: Điều phối toàn bộ quy trình ghi nhận và quản lý giam giữ.
+      - Nhân viên lâm sàng: Tương tác với hệ thống để nhập thông tin giam giữ.
+      - Thông báo: Quản lý và gửi thông báo nhắc nhở.
+      - Tuân thủ pháp luật: Đảm bảo thông tin giam giữ tuân thủ các quy định pháp lý.
+   7. Mối quan hệ giữa các lớp:
+      - Nhân viên lâm sàng và Quản lý giam giữ: Quan hệ gọi: Nhân viên lâm sàng gửi thông tin giam giữ đến trình quản lý.
+      - Quản lý giam giữ và Tuân thủ pháp luật: Quan hệ kết hợp: Quản lý giam giữ kiểm tra thông tin giam giữ qua Tuân thủ pháp luật.
+      - Quản lý giam giữ và Hồ sơ giam giữ: Quan hệ tạo: Quản lý giam giữ tạo hoặc cập nhật hồ sơ giam giữ.
+      - Quản lý giam giữ và Thông báo: Quan hệ gọi: Gửi nhắc nhở kiểm tra định kỳ qua Thông báo.
+   
+      
+       
+        
+        
      
-       ![PlantText](https://www.planttext.com/plantuml/png/N8v12i9034NtESKSfL8HbyMU8Cn43Cma9KaNHJoPYnx9AuWe2BFzxpzuh-S-UA35sYhaYkvfmc2II7T82HxmMy-4DMuZ6ascLt9d5QpTwKX14gnomioLO-lul2wBMinVlOCZEbqegvNUsZoe7KhZlm83IVaq0y0R003__mC0)
-     
-       - Key Abstraction Definitions :
-         Patient (Bệnh nhân): Đại diện cho cá nhân được quản lý trong hệ thống.
-         HealthCareProfessional (Nhân viên y tế): Người thực hiện các đánh giá và hỗ trợ.
-         DetentionFacility (Cơ sở giam giữ): Thông tin về địa điểm và điều kiện giam giữ.
-         SupportSession (Phiên hỗ trợ): Các buổi hỗ trợ tâm lý/điều trị.
-         CaseRecord (Hồ sơ vụ việc): Quản lý thông tin chi tiết về trường hợp của bệnh nhân.
-         SystemAdmin (Quản trị viên hệ thống): Người quản lý và giám sát hệ thống.
-         
-       - Upper-Level layers and their dependentcies :
-         
-        ![PlantText](https://www.planttext.com/plantuml/png/V9F1Qjmm54Nt-efBLkqYFv15IDf2EYIK5ZBGhU8nigX7urhIqA5aKRAOHLTPXzAMOGXjCPD5DxKeMJZCVxmlw2yKQUpKpfXwPQ5xzSvzJ_hZRW-quRcnuvHbF7h3HOoTbtciOsMuaHE54pwBSpmwado2aIGtLuzty9u1KSgrnd0G5lvxBibTA9Y4t4UCoAsGUhsjjryaL1OATvTKNbjCgoyJ678_eCJwXjmdYL7rIma6dBDpzW_cCCjI6TKi4o6ZXcYp8FTD2LzjgKG7x8dLKiLQRsGDusjo1TBgDvH8F5o6ARbblNdi0unXSWvJ5If1GcwH8IKtxydpoivWg5n549AF8IIvrHRzCsuu3gCerhhXFitj316LHTO-jCFkNRMf0G-kAPLBXMZz5PhSvnwcC2KZgRmDmQwaXx_g5Ef5FECwRlYUzXo_HHSC3Tl9-iR2v5xUyi0arS_xNb6vKA7nP_vF-FdZhUNAztZUC0q7sDtTVp2wFHoHAoHcrNVh-tPjMLVWBQsERUlHZjzIDiOGPg_TOa-t6P7ojzO4Lv1j5JlDgLpuPd_uNvc7aVfTkBki5dXNtz6UcCF1VRokZTm5_8LktXyxYDN8Fsh66FiB003__mC0)
-     
-       - Layer Definitions :
-           + Lớp giao diện (Presentation Layer - UI/UX):
-              - Mục đích: Cung cấp giao diện người dùng để các nhân viên y tế, quản trị viên hệ thống và nhân viên hỗ trợ tương 
-                tác với hệ thống.
-              - Phụ thuộc:
-                + Phụ thuộc vào Lớp logic ứng dụng để lấy dữ liệu và hiển thị.
-                + Phụ thuộc vào API để xử lý dữ liệu đầu vào và đầu ra.
-              - Ví dụ các thành phần:
-                + Bảng điều khiển quản lý bệnh nhân.
-                + Giao diện tạo và xem hồ sơ vụ việc.
-                + Giao diện lên lịch các phiên hỗ trợ.
-           + Lớp logic ứng dụng (Application Logic Layer):
-              - Mục đích: Xử lý các logic nghiệp vụ chính, như quy tắc giam giữ, kiểm tra tính hợp lệ dữ liệu và quy trình làm việc.
-              - Phụ thuộc:
-                + Phụ thuộc vào Lớp truy cập dữ liệu để lấy và lưu trữ dữ liệu.
-                + Cung cấp dữ liệu đã xử lý cho Lớp giao diện.
-              - Ví dụ các thành phần:
-                + Quy tắc quản lý hồ sơ (liên kết bệnh nhân với cơ sở giam giữ).
-                + Logic lên lịch các phiên hỗ trợ.
-                + Logic kiểm tra chứng chỉ của nhân viên y tế.
-            + Lớp truy cập dữ liệu (Data Access Layer):
-              - Mục đích: Cung cấp giao diện có cấu trúc để truy vấn, cập nhật và quản lý cơ sở dữ liệu.
-              - Phụ thuộc:
-                + Phụ thuộc vào Lớp cơ sở dữ liệu để lưu trữ và truy xuất dữ liệu thực tế.
-                + Hỗ trợ Lớp logic ứng dụng với các thực thể và thao tác dữ liệu.
-              - Ví dụ các thành phần:
-                + ORM (Object-Relational Mapping) cho các thực thể như Patient, CaseRecord, SupportSession.
-                + Các phương pháp đồng bộ dữ liệu (như quản lý bộ nhớ đệm - cache).
-            + Lớp cơ sở dữ liệu (Database Layer):
-              - Mục đích: Lưu trữ tất cả dữ liệu thô, bao gồm thông tin bệnh nhân, hồ sơ vụ việc và nhật ký các phiên hỗ trợ.
-              - Phụ thuộc:
-                + Không phụ thuộc vào bất kỳ lớp nào khác (lớp nền tảng).
-                + Phục vụ dữ liệu cho Lớp truy cập dữ liệu.
-              - Ví dụ các thành phần:
-                + Bảng dữ liệu cho Patients, HealthCareProfessionals, CaseRecords, v.v.
-                + Chiến lược sao lưu và đồng bộ hóa.
-                  
-        - Biểu đồ sequence :
-          
-      ![PlantText](https://www.planttext.com/plantuml/png/h9J1Qjim6CVlUee_FMs7la0Wet4CIy2Cm1hOLLKzIyoHKqiUv0bws6LZXnrNjuT1MEaEFTcC7bJo7dg2lSAGab2xYJiAkndq-_xwlfy-_AU-ErAQvhgOfOGodUKOnJJLV4ZpU99dxsEbH2Pf2gem6ax8dEPQC36dKkFWxKBfU8ONq_7B0mTCn-tpe512naeXoXB1F194RIIaccB0cAVe8iuz5GxsO2TKnUlJW91-7u6jRZJklzZgHu6pOW6Tcv-Iezyde-44Xwym7VVmXjlgUWxDpQrCe8N4YQtF9OVavbAIwTY1GTJ3QrjV2opCiW3paTfMPGPkwwzGgx9T5aIkB1n4FKIhNqLdV3XOWq4FnzmiPrqWFfgB36nLGjdwEqvjVODKsFgy8660m-rTxqp98Dr44kdctWl9mLpe-hBDDCUvhQxmmLPt6cU5-tQyxtiZffdrQDHMgbDz_zcKaYCHfeJsadLkgr8cso7QpeTUkSzs3zHHk-E-GUu8RgPuL_lVfU6xrSJ3Q7aca-U9PesWVpXkeHsk_RirHtM28xEKI6tzYN7NwpVdgBw2DfSpfERt8x_xwQTsENse84_ixcvcbz0v5owoqUlpDxXfQzlSV_3RaDDUvADOdhh_727aBm000F__0m00)
-     
-     + ### **Báo cáo hành chính:**
-      ### **Báo cáo hành chính:**
+### **Báo cáo hành chính:**
  1. Xác định các lớp phân tích:
     - **Quản lý báo cáo**: Chịu trách nhiệm điều phối quá trình tạo báo cáo.
       + Thuộc tính: loaiBaoCao: String
@@ -303,7 +305,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
      + Người khởi tạo quy trình tạo báo cáo.
      + Tương tác với Quản lý báo cáo để yêu cầu tạo báo cáo.
    - Ghi nhật ký: Ghi lại các hoạt động tạo báo cáo để phục vụ kiểm tra và truy vết.
-6. Mối quan hệ giữa các lớp:
+5. Mối quan hệ giữa các lớp:
    - Quản trị viên và Quản lý báo cáo: Quan hệ gọi: Quản trị viên khởi chạy quá trình tạo báo cáo thông qua Quản lý báo cáo.
    - Quản lý báo cáo và Thu thập dữ liệu: Quan hệ kết hợp: Quản lý báo cáo yêu cầu Thu thập dữ liệu thu thập dữ liệu.
    - Quản lý báo cáo và Báo cáo: Quan hệ tạo: Quản lý báo cáo chịu trách nhiệm tạo và quản lý đối tượng Báo cáo.
