@@ -95,69 +95,68 @@ Kiến trúc máy khách-máy chủ.
 
 Dựa trên yêu cầu của hệ thống Mentcare, các lớp phân tích cho ca sử dụng "Quản lý chăm sóc cá nhân" bao gồm:
 
-- **Patient:** Lớp đại diện cho bệnh nhân.
-- **ClinicalStaff:** Lớp đại diện cho nhân viên lâm sàng.
-- **Consultation:** Lớp đại diện cho buổi tư vấn.
-- **PatientRecord:** Lớp đại diện cho hồ sơ bệnh nhân.
-- **Diagnosis:** Lớp đại diện cho chẩn đoán.
-- **Treatment:** Lớp đại diện cho phương pháp điều trị.
-- **Medication:** Lớp đại diện cho thuốc được kê đơn.
-- **Referral:** Lớp đại diện cho việc giới thiệu bệnh nhân đến các bộ phận khác.
+- **BenhNhan:** Lớp đại diện cho bệnh nhân.
+- **NhanVienLamSang:** Lớp đại diện cho nhân viên lâm sàng.
+- **BuoiTuVan:** Lớp đại diện cho buổi tư vấn.
+- **HoSoBenhNhan:** Lớp đại diện cho hồ sơ bệnh nhân.
+- **ChanDoan:** Lớp đại diện cho chẩn đoán.
+- **DieuTri:** Lớp đại diện cho phương pháp điều trị.
+- **ThuocKeDon:** Lớp đại diện cho thuốc được kê đơn.
+- **GioiThieu:** Lớp đại diện cho việc giới thiệu bệnh nhân đến các bộ phận khác.
 
 2. **Mô tả hành vi thông qua biểu đồ sequence**
 
 Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "Quản lý chăm sóc cá nhân":
 
-![diagram](https://www.planttext.com/plantuml/png/b98nJiD044NxFSM8dWkaG4XEIQJ8kA3TE4vs5NjihSVfgIYe8aH5Wq4KH22bzXOfDl8zvWHS0SKeWYM0IFtVznjh_vjTdvOa3LLPAcHCkO4WrQXZcPwJd4n48GtfM1SI2Ow6adI252PnRiP784iOXZuHv5XMAKdIENP0uETzBQUObxhimhuVHYQHb2L8NHZvuI0Pw_ZpkmC_3PD9OenCkomKmli9E3w1OTY3oBraCDFSh3DGR6-WR6iOiRr21QZS0ufXk6MzSWyYmyqZpDbU_jBQjmKzYBYfSnXLR6yrKBk2EJTF21dREos2tKbdsYqHPjoiQP-TRzb_E_izY9HRPX0hRfuHDelSrIZwErN0pMi1gBXv9P-1kRlF_-s9Tfv2jQksnYaKojK5R1QQxMK5PDXUY-X7xL-LmwuOxAuWLR5Tn31pIzWisXh5u4SrVUSEystdq_cckdiLKfhjLIMwmUp9VEWmKpUBTbKTCj4BLySVReJqQrUS9ZYkilGT003__mC0)
+![diagram](https://www.planttext.com/plantuml/png/d9AnQXj148RxVOeVztu15S7e13742a9UZDlp9MWNwLR7QK-zAnTk94mgDpw7514ngBujLEonxp5Fu5S8ksU13ya6gPvlvlzdvdyr6tOsqt6kYtJ2uaHFStmNzbbTIRjI5_OvlRHFQiIoEDSoaLciD4xEoJnSkh9Bvaw9G9yWdc4mR6FTWimloTtwYge_3HArYKXGzLVLYwajctglNQyNainjmNCozw7EstKk2ZBBv9jTrGltDgBVHhvACe-I2qdchWZ0aB4z6-Bq2mR33hZzbs8igTga46GUC7CbRiAcKBwD3OQUtJEY0vvJzHjpChSVz7wa77N0gIgdk0atWtPhpFtLa7hxBDhQk_2j65ErqRlitBC7AlSwuCAkKYJX5wYN_XcijnMCg7h9e0HLBxhDO6wVfWUgyQrQ9jpQbMg4JDWoGxqCZuRsdsPyh_XdBSTuwM-zw2P56DiLwgKh5UllDR33uGXL7x6WEWh1X6wIoKAeTYJRq35w8JHkNHmUvcjR9eqFXSdx2Upif_fHf9F_0000__y30000)
 
 3. **Xác định nhiệm vụ của từng lớp phân tích**
-
-- **Patient:** Lưu trữ thông tin cá nhân của bệnh nhân như tên, địa chỉ, ngày sinh, liên hệ gia đình.
-- **ClinicalStaff:** Quản lý thông tin nhân viên lâm sàng và thực hiện các thao tác trên hồ sơ bệnh nhân.
-- **Consultation:** Quản lý thông tin về buổi tư vấn, bao gồm ngày giờ, nhân viên lâm sàng tham gia, và các ghi chú tư vấn.
-- **PatientRecord:** Lưu trữ toàn bộ thông tin về bệnh nhân, bao gồm chẩn đoán, phương pháp điều trị, thuốc kê đơn, và giới thiệu.
-- **Diagnosis:** Quản lý thông tin về các chẩn đoán bệnh của bệnh nhân.
-- **Treatment:** Quản lý thông tin về các phương pháp điều trị được áp dụng cho bệnh nhân.
-- **Medication:** Quản lý thông tin về các loại thuốc được kê đơn cho bệnh nhân.
-- **Referral:** Quản lý thông tin về việc giới thiệu bệnh nhân đến các bộ phận khác.
+   
+- **BenhNhan:** Lưu trữ thông tin cá nhân của bệnh nhân như tên, địa chỉ, ngày sinh, liên hệ gia đình.
+- **NhanVienLamSang:** Quản lý thông tin nhân viên lâm sàng và thực hiện các thao tác trên hồ sơ bệnh nhân.
+- **BuoiTuVan:** Quản lý thông tin về buổi tư vấn, bao gồm ngày giờ, nhân viên lâm sàng tham gia, và các ghi chú tư vấn.
+- **HoSoBenhNhan:** Lưu trữ toàn bộ thông tin về bệnh nhân, bao gồm chẩn đoán, phương pháp điều trị, thuốc kê đơn, và giới thiệu.
+- **ChanDoan:** Quản lý thông tin về các chẩn đoán bệnh của bệnh nhân.
+- **DieuTri:** Quản lý thông tin về các phương pháp điều trị được áp dụng cho bệnh nhân.
+- **ThuocKeDon:** Quản lý thông tin về các loại thuốc được kê đơn cho bệnh nhân.
+- **GioiThieu:** Quản lý thông tin về việc giới thiệu bệnh nhân đến các bộ phận khác.
 
 4. **Xác định một số thuộc tính và quan hệ giữa các lớp phân tích**
 
-- **Patient**
-  - Thuộc tính: `patientID`, `name`, `address`, `dateOfBirth`, `contactDetails`, `familyContacts`
-  - Quan hệ: 1 Patient có nhiều PatientRecord
+- **BenhNhan**
+  - Thuộc tính: `maBenhNhan`, `ten`, `diaChi`, `ngaySinh`, `thongTinLienHe`, `nguoiThan`
+  - Quan hệ: 1 BenhNhan có nhiều HoSoBenhNhan
 
-- **ClinicalStaff**
-  - Thuộc tính: `staffID`, `name`, `role`, `contactDetails`
-  - Quan hệ: 1 ClinicalStaff có nhiều Consultation
+- **NhanVienLamSang**
+  - Thuộc tính: `maNhanVien`, `ten`, `vaiTro`, `thongTinLienHe`
+  - Quan hệ: 1 NhanVienLamSang có nhiều BuoiTuVan
 
-- **Consultation**
-  - Thuộc tính: `consultationID`, `date`, `time`, `notes`
-  - Quan hệ: 1 Consultation thuộc về 1 PatientRecord, 1 Consultation có nhiều ClinicalStaff
+- **BuoiTuVan**
+  - Thuộc tính: `maBuoiTuVan`, `ngay`, `gio`, `ghiChu`
+  - Quan hệ: 1 BuoiTuVan thuộc về 1 HoSoBenhNhan, 1 BuoiTuVan có nhiều NhanVienLamSang
 
-- **PatientRecord**
-  - Thuộc tính: `recordID`, `patientID`, `riskAssessment`
-  - Quan hệ: 1 PatientRecord có nhiều Diagnosis, Treatment, Medication, Referral
+- **HoSoBenhNhan**
+  - Thuộc tính: `maHoSo`, `maBenhNhan`, `danhGiaRuiRo`
+  - Quan hệ: 1 HoSoBenhNhan có nhiều ChanDoan, DieuTri, ThuocKeDon, GioiThieu
 
-- **Diagnosis**
-  - Thuộc tính: `diagnosisID`, `condition`, `date`, `comments`
-  - Quan hệ: 1 Diagnosis thuộc về 1 PatientRecord
+- **ChanDoan**
+  - Thuộc tính: `maChanDoan`, `tinhTrang`, `ngay`, `ghiChu`
+  - Quan hệ: 1 ChanDoan thuộc về 1 HoSoBenhNhan
 
-- **Treatment**
-  - Thuộc tính: `treatmentID`, `method`, `date`, `comments`
-  - Quan hệ: 1 Treatment thuộc về 1 PatientRecord
+- **DieuTri**
+  - Thuộc tính: `maDieuTri`, `phuongPhap`, `ngay`, `ghiChu`
+  - Quan hệ: 1 DieuTri thuộc về 1 HoSoBenhNhan
 
-- **Medication**
-  - Thuộc tính: `medicationID`, `drugName`, `dosage`, `date`, `comments`
-  - Quan hệ: 1 Medication thuộc về 1 PatientRecord
+- **ThuocKeDon**
+  - Thuộc tính: `maThuoc`, `tenThuoc`, `lieuLuong`, `ngay`, `ghiChu`
+  - Quan hệ: 1 ThuocKeDon thuộc về 1 HoSoBenhNhan
 
-- **Referral**
-  - Thuộc tính: `referralID`, `department`, `date`, `comments`
-  - Quan hệ: 1 Referral thuộc về 1 PatientRecord
-
+- **GioiThieu**
+  - Thuộc tính: `maGioiThieu`, `boPhan`, `ngay`, `ghiChu`
+  - Quan hệ: 1 GioiThieu thuộc về 1 HoSoBenhNhan
 5. **Biểu đồ lớp mô tả lớp phân tích và giải thích**
 
-![diagram](https://www.planttext.com/plantuml/png/d5CvRiCm4Epr2a9b01j9wyg9rQJ80TiVM90hcGWFWxigWY0lIv4dvGi1JSiI5Lj0t6cMWvazHZzVtqjY2DnQKqW3HE8LMADZyL488VO9F5OBiU6WNHEB3YmECIWLa6XOKi3uKZ_emBk5g80n5gLt398hPD0cezTWjNbVfVV-vRCuzhGosca9PiDGrwapYf_JVGLlCdp1ltVnZbh3mDgxP287bTmh3jXFnZewRxKz8ESPpyWV5xj6wODA-k7mdIkVNNdGz7PFX4GM7V_LhZGqpfEcfAiwcAj8xvIEiroUH7eR7Swqlmq87D-I1NSmjx38Ew-kqNz2fULWz_Q4HviFRVCykhJo10rUuxh66aC0qzqZeP4ZxY4SPlsVG_SdbNUbcCr4UJkVtvHv38eysJbpDKXVaOLpn1jgTAx7c4qeJX5FUPfadI8noUeFEqdhBb4iqQdMcby0003__mC0)
+![diagram](https://www.planttext.com/plantuml/png/b591QiCm4Bph5SB7Ga9xzId4XWHgIeX5xjj4Q1ViLR2jGYbzMGzzKhzGd4QsvIGkEUumcftLpC_Nzw9ke6fSMOXz0NKjbvhn1O7bXv1Ibk3dMEPDHMnQjD71U218a8O86tZFYJ6MAJJwz0Gj6qMSaUQr3hdEaXfk-1HdB-tU7MdEeCo1ZRVauGbBRq2giW7Xke5krx9ruNQ3mpqmFgm_of2DfQBoRq1Aq5qAhsrknv_QOaFPwzzy0COLmTRHrbxg9WYSsbxJpy7HnAWgO3DnmmtRAMcdAlBgvt6eSqHdsMmGZlUhAtHs_wnJsza_8QD4Bx22jClQhVTlN57RCjBEB-o0UA3rQZUZ4FvJxwADdY8vcydeSJv_Y8BKnRZ7KK3jYYRw3eQCqNiHLEgMs0J9LsMASmvyYjA7ECNg_baiD1zSMVm2003__mC0)
 
 #### **Theo dõi bệnh nhân**
 
