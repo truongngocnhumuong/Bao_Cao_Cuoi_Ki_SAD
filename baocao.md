@@ -273,8 +273,51 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
          + Báo cáo được lưu trữ và sẵn sàng để sử dụng.
          + Hệ thống ghi lại lịch sử tạo báo cáo.
        - Extension Points: Tích hợp với hệ thống quản lý cấp cao: Các báo cáo có thể được chia sẻ trực tiếp với quản lý cấp cao qua email.
-     
-     
+      
++ ### **Quản lý dịch vụ y tế (Health Service Management):**     
+   1 **Xác định các lớp phân tích**
+      - **HealthServiceManager:** Đại diện cho quản lý dịch vụ y tế, yêu cầu và nhận báo cáo.
+      - **ReportGenerator:** Xử lý yêu cầu, tạo báo cáo dựa trên dữ liệu hệ thống.
+      - **PatientDataRepository:** Quản lý dữ liệu bệnh nhân, cung cấp dữ liệu cần thiết cho báo cáo.
+      - **DrugDataRepository:** Quản lý dữ liệu về thuốc, cung cấp thông tin về chi phí và số lượng thuốc được kê đơn
+
+   2 **Nhiệm vụ của từng lớp phân tích**
+        **HealthServiceManager (Trình quản lý dịch vụ sức khỏe) :**  
+            - Gửi yêu cầu báo cáo.  
+            - Nhận và phân tích thông tin từ báo cáo để ra quyết định.  
+         **ReportGenerator (Báo cáoGeneratorn) :**  
+            - Xử lý yêu cầu báo cáo.  
+            - Thu thập dữ liệu từ các nguồn và tổng hợp thành báo cáo.  
+         **PatientDataRepository (Kho lưu trữ dữ liệu bệnh nhân)**  
+            - Cung cấp thông tin tổng hợp về bệnh nhân, bao gồm số lượng bệnh nhân được điều trị.  
+         **DrugDataRepository (Kho dữ liệu thuốc)**  
+            - Cung cấp thông tin về loại thuốc được kê đơn, số lượng và chi phí.
+
+   3 **Biểu đồ sequence :**
+
+  ![Plantext](https://www.planttext.com/plantuml/png/Z951QiCm44NtEiLSm1VmmWGQI1SfbBQRBYUAi0MkPCQZGawGTO_WX13e9djhqOLFeXFq2aKbQcpQGdRIpFkyOURJVynQHcBtKWkKR0bk5TPSFIfwrLBTeS5I4M0BvwTea5XBtQ1XU52D9LueemXZ5blu-Kp0UsIj3C-HCMPQpPOs4JytOd4Ic9ChVzEn-esAD5XMN8mvF0_l3cJeZmvMGsT13fqLb_6oOkpBOHdwmmRMmP-Wri5l7Qo2tveAJ3NiZ1Yna4r5JnJwFTIXx_J_-OauZVwNbIiN_9iKYRdMbd8ZKLQaG-LmuqmPjt5eHjkOAREEn_u2003__mC0)
+
+  4 **Thuộc tính và mối quan hệ giữa các lớp :**
+   - Thuộc tính:
+     **Trình quản lý dịch vụ sức khỏe**  
+        - `managerID`: ID của người quản lý.  
+        - `name`: Tên của người quản lý.
+     **Trình tạo báo cáo**  
+      - `reportID': ID báo cáo. 
+      - `date`: Ngày tạo báo cáo.
+     **Kho lưu trữ dữ liệu bệnh nhân**  
+      - `patientID`: ID bệnh nhân.  
+      - `visitDate`: Ngày khám.
+     **Kho dữ liệu thuốc**  
+      - `drugID': ID thuốc. 
+      - `cost`: Chi phí thuốc.
+   - Mối quan hệ giữa các lớp
+      - **HealthServiceManager** gửi yêu cầu đến **ReportGenerator**.  
+      - **ReportGenerator** truy xuất dữ liệu từ **PatientDataRepository** và **DrugDataRepository**.  
+      - **ReportGenerator** trả kết quả cho **HealthServiceManager**.
+
+   5 **Biểu đồ Lớp :**     
+   ![PlanText](https://www.planttext.com/plantuml/png/RDAzIWGn40VmFaynfHRx0YdaYiKFK12liXnsnrmWcxsRJ0uEiVP9HB2nloqiV99z0bz1OaxPzLBEn_y76V8rV2o284lid6eSXW2NX4vMI-AjRUW6FHfYU5G0LPUBgrh3KjXwaveUEvhKmBI95EIErZtBoQbwKWStTox84wFq1v9_cdEnHI4DDGebp-G07OEtA9Qyr2YOXi5ApxlChlDexcvji6bxWZ-GDAk9C-LhZgPajnpD76xw81hENO_oX_wcirYyQLMT7Hr5tt--HMZ6_MjK_sTfl_nc3TVZ_cK7xJYyWxFZy5nE5vvKYYx8j-a_V0C00F__0m00)
   
 4. Xác định các phần tử thiết kế
 5. Thiết kế hệ thống con
