@@ -328,9 +328,72 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
 
      
 
-  
-4. Xác định các phần tử thiết kế
-5. Thiết kế hệ thống con
-6. Thiết kế các lớp
-7. Kết luận
+## 3. Xác định các phần tử thiết kế
+   1. Các phần tử thiết kế trong hệ thống:
+      - Giao diện người dùng:
+        + Phần tử thiết kế:
+          - Các biểu mẫu nhập liệu (Forms): Quản lý hồ sơ bệnh nhân, giam giữ bắt buộc, và lịch hẹn.
+          - Màn hình báo cáo: Hiển thị báo cáo hành chính và cảnh báo.
+          - Menu điều hướng: Giúp nhân viên lâm sàng và quản trị viên truy cập các chức năng dễ dàng.
+          - Thông báo trạng thái: Hiển thị thông báo lỗi hoặc thành công cho người dùng.
+        + Tổ chức:
+          - Giao diện tập trung vào sự đơn giản, giảm thiểu lỗi nhập liệu.
+          - Phân quyền hiển thị: Nhân viên lâm sàng, quản trị viên chỉ thấy các chức năng phù hợp.
+      - Lớp logic nghiệp vụ:
+        + Phần tử thiết kế:
+          - Trình quản lý bệnh nhân: Quản lý thông tin bệnh nhân, lịch sử điều trị, và tích hợp lịch hẹn.
+          - Trình theo dõi bệnh nhân: Theo dõi tuân thủ điều trị, phát hiện và gửi cảnh báo.
+          - Trình quản lý giam giữ: Ghi nhận và kiểm tra thông tin giam giữ.
+          - Trình quản lý báo cáo: Xử lý báo cáo hành chính, lưu trữ và truy xuất dữ liệu.
+        + Tổ chức:
+          - Chia lớp nghiệp vụ thành các module độc lập, mỗi module xử lý một nhóm chức năng:
+            + Quản lý bệnh nhân
+            + Báo cáo hành chính.
+            + Theo dõi điều trị.
+          - Áp dụng nguyên tắc Separation of Concerns (SoC): Mỗi module chỉ thực hiện một nhiệm vụ cụ thể.
+      - Lớp phân tích:
+        + Phần tử thiết kế:
+          - Tích hợp hệ thống kê đơn thuốc: Gửi và nhận thông tin kê đơn.
+          - Tích hợp hệ thống hồ sơ bệnh án quốc gia: Đồng bộ thông tin bệnh nhân.
+          - Tích hợp hệ thống lịch hẹn: Kiểm tra lịch hẹn và lên kế hoạch nhắc nhở.
+        + Tổ chức:
+          - Sử dụng API hoặc giao thức tiêu chuẩn (REST hoặc SOAP) để tích hợp.
+          - Đảm bảo bảo mật dữ liệu khi trao đổi giữa các hệ thống.
+      - Lớp dữ liệu:
+        + Phần tử thiết kế:
+          - Cơ sở dữ liệu bệnh nhân: Lưu trữ thông tin cá nhân, lịch sử điều trị, và trạng thái giam giữ.
+          - Cơ sở dữ liệu báo cáo: Lưu trữ các báo cáo đã tạo và lịch sử truy cập.
+          - Cơ sở dữ liệu nhật ký: Theo dõi các hành động thực hiện trên hệ thống để kiểm tra và truy vết.
+        + Tổ chức:
+          - Thiết kế cơ sở dữ liệu quan hệ với các bảng: Thông tin bệnh nhân, Lịch hẹn, Thông tin giam giữ , Báo cáo hành chính.
+          - Sử dụng ORM (Object-Relational Mapping) để giảm độ phức tạp khi truy vấn dữ liệu.
+         
+   2. Cách tổ chức các phần tử:
+      - Kiến trúc 3 tầng:
+        + Tầng giao diện:
+          - Tương tác với người dùng qua trình duyệt web.
+          - Gửi yêu cầu đến tầng logic nghiệp vụ.
+        + Tầng nghiệp vụ:
+          - Xử lý tất cả các logic nghiệp vụ.
+          - Tương tác với tầng dữ liệu để lấy hoặc lưu thông tin.
+        + Tầng dữ liệu: Lưu trữ và truy xuất dữ liệu từ cơ sở dữ liệu.
+   3. Các cơ chế thiết kế được sử dụng:
+      - Cơ chế bảo mật:
+        + Xác thực người dùng bằng mật khẩu và phân quyền.
+        + Xác thực người dùng bằng mật khẩu và phân quyền.
+        + Ứng dụng: Đảm bảo chỉ nhân viên được ủy quyền mới có thể truy cập thông tin giam giữ hoặc báo cáo.
+      - Cơ chế tích hợp:
+        + Sử dụng API tiêu chuẩn để giao tiếp với hệ thống bên ngoài.
+        + Cơ chế retry để xử lý lỗi khi kết nối bị gián đoạn.
+        + Ứng dụng: Tích hợp hệ thống kê đơn thuốc và lịch hẹn.
+      - Cơ chế xử lý lỗi:
+        + Hiển thị thông báo lỗi rõ ràng cho người dùng (ví dụ: "Dữ liệu không hợp lệ").
+        + Ghi lại lỗi trong nhật ký để phân tích và xử lý.
+        + Ứng dụng: Xử lý lỗi khi dữ liệu nhập không hợp lệ trong quản lý giam giữ.
+      - Cơ chế nhắc nhở tự động:
+        + ên lịch nhắc nhở kiểm tra định kỳ dựa trên thông tin giam giữ hoặc lịch hẹn.
+        + Ứng dụng: Tự động gửi thông báo qua email hoặc hệ thống UI.
+6. Thiết kế hệ thống con
+7. Thiết kế các lớp
+8. Kết luận
    
