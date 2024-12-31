@@ -393,7 +393,9 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
       - Cơ chế nhắc nhở tự động:
         + ên lịch nhắc nhở kiểm tra định kỳ dựa trên thông tin giam giữ hoặc lịch hẹn.
         + Ứng dụng: Tự động gửi thông báo qua email hoặc hệ thống UI.
-6. Thiết kế hệ thống con
-7. Thiết kế các lớp
-8. Kết luận
+
+
+## 4. Thiết kế hệ thống con
+## 5. Thiết kế các lớp
+## 6. Kết luận
    
