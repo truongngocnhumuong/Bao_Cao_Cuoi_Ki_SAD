@@ -393,9 +393,27 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
       - Cơ chế nhắc nhở tự động:
         + ên lịch nhắc nhở kiểm tra định kỳ dựa trên thông tin giam giữ hoặc lịch hẹn.
         + Ứng dụng: Tự động gửi thông báo qua email hoặc hệ thống UI.
+## 4. Thiết kế hệ thống con Danh sách các hệ thống con cho bài toán Mentcare: A mental health support system:
+- **Quản lý bệnh nhân**: Thêm mới, cập nhật, tìm kiếm, hoặc xóa bệnh nhân. 
+  
+  ![diagram](https://www.planttext.com/plantuml/png/T98_JiCm6CLtd-9JfZBq0Xcg2Y8nK5L2P62pt2IABTBFoBLHEo86PiG5-BDLL834L0jrSCKzV0AkW1n4sn1rVNg_b_Szvzkk-XFDb3RZYh1CImL3xfwGNWatHpgZsYzNm2OmB8qKYS6IZAJ1dAaPHCU2IPeBRs-HdXg_V4PQkKyw2WAd67AYm0PV8WeacKIjP0LHgjmBShg-4zvU6th1XRSts2PJ9P0deZ0dFF05Qg5d40raARAskvP9pZGRiKa1qT5PCcYxWah8vXxezZO5Oz3SpSSDffDozu5bAl2mLkjv3iWV4l1conYctYxg9UgqFG5D2Bgzt_enJDrZHZNtzZtRWzR6G8HJOgY-tWpLojlNFVvWs_c0vku1ESs2TPlr_uY6grrsEzabhr-UUtilEhjKSwJDu36SXmkH--K2IR_0FFnxFm000F__0m00)
+  
+- **Theo dõi điều trị**: Gửi cảnh báo, kiểm tra tuân thủ điều trị.
+  
+  ![diagram](https://www.planttext.com/plantuml/png/V98nJiCm58RtdCBA10CNo80gYCJGqeNkJsuInLPJMpWs8YDYOEZ44Kg5a10L4qiirC5Sn2VW2kXLD6ben6fz___-zpz_sysWr5HfCoy2ccYfo9Yv9m4ttBqAg43xUaDeISQvaJms8W-cqeYKgeg45vnAIBct3m8cB9EGkWyENu_Sspi3Mdcx256BNCmp4IHIQ2KB4awKUnEiGMUCUtilUgGJnGMBUMQ630qoeRckI3YIEKzwyErxa59DfxJCI7X-5OzwC7mEWcObSdBQP8p83BFCGIiAsc0LcddxSdJfLcUuATlsSnpi12Zkfep8hRThADmdj5u7-gu6NRRX8rBu-hdwT_G8GLJW7Zj1mHC6fRVh0nofFV_KstSey6gcTVgxWLQ-NeeSD7DBlX-c9tTRtUyP4LnWtQr5fwwc-8WCVRtHS6rylUfC6MGYnI_v0m00__y30000)
+  
+- **Quản lý báo cáo hành chính**: Tạo, lưu trữ, truy vấn báo cáo.
+  
+  ![diagram](https://www.planttext.com/plantuml/png/V9A_IWGn4CRxFCMmbHRt0biSXxTWuI68suVi7pR1DO5i8cuf5XPMzmZBONDus6yGYzoBv0by1SdTkVyGs-7tpNpppNoRhqMbY5JwlaGaLKB2ZNRjXcCbdNd53ynkEP0AhWijMAHvWHAXUKPa3S4b8m9dp9aNZa-gqdxYn3O2fxOHWHTwA68vHwdWIeeIWbZQTqxnVisSUTBuZZ9ddlb45al6QSHoVKMzEEUAgHg2bIXOEa4FDPGHHH9IvH0iRwFL1F4bXBeTO3RlV8MWNDk8Nd0MCxlLIsftv-WNyeAnen0UdTcDznqgnpJCvaUR_qux41xrTaCeNVjMuyoP3rpwaFMGzSYWwu3gU_SDfzux1E_NTeCFdlwmt6Tqkf6Y_Ydw0SDykdH3kEY0HSup_re_0000__y30000)
+  
+- **Quản lý giam giữ**: Xác thực, lưu trữ, kiểm tra thông tin giam giữ.
+  
+  ![diagram](https://www.planttext.com/plantuml/png/P9BDIWCn58NtUOemgxhm1MOX1GTSM0fY5-v2EZFClJYzaJIHTYakN8iluC-kMAhWga5SHFeUUG9VGJ9WsnctzvxlSiv9VjnNVsgaDdPICvaRfVaG_3E9Q_GBudBAXvLLc5cgs5XPAgIUy-G4fH851dT7uio6zGk9sd-A2kL4L1ZSAebaL6LO4iiL6QrgdeoqVoKGt_SOt8qLbu31tLAN6saaoB2qfn3faWoQEKy6giAygss6h916ZkMqvCdnUJReQkACiMqEVdYqjPPo0tun4GRy1rN2uBwPNXRSQX1JsWFsHqIwRJ3bi-2MJG7DiHOsQaaZt3XE-Sm_vS90SEzv2sZMKHTTfxpUl5bXTDTDNEuTC-0V2KGUG-mkT6ssLF-DxJgvWkP98RW7xErJxHgsZQRy8gOX2EibiNv9HVnDlm000F__0m00)
+  
+- **Hệ thống tích hợp**: Đồng bộ hóa với các hệ thống kê đơn thuốc, lịch hẹn và hồ sơ bệnh án
+  
+  ![diagram](https://www.planttext.com/plantuml/png/X5AnQiCm5Dpr5S9JElG7F9H030tKT8c7RaAnZINgFWL7XcGi7JA7JDqIGfTI4mgTB4e6zKVU5_GNYWnjx2JGzUdktjqzVPjzVwfveSk7dF1Ogu8EqIoO5cYMaB6nVGK6cR9hIVcK3jD8ACXkCyKb6QiI4bxCgNSjkMA9HBC05jag5aoWsKuyHt5lWKo1n0fqeNBgHOLz0y6-bXBDOydkXKJp14mV4QD2WWXaMju8Hqz1IpsdNgWo6P-0cob9kEPZFasfDnW5uGd83GbfPw2NLty6VVgrHBDoeT4yimJDZkKkKzaB5TOR6Q3PXStWWloId43Ng4zdQ2gMsq_MrZkZqUKvfIQ5JsTs4pSNU8_Fq1gGGmz6GUZJ7EkN-Jzk7RAbdw6ff7DNxy7LS_RSXpt7-JerQM7N85XiFo0xa-XGxaHWlMtMhMIlpUgMsRwEJ-zS4o2mhg3J9kcdaBWl-mC00F__0m00)
 
-
-## 4. Thiết kế hệ thống con
 ## 5. Thiết kế các lớp
 ## 6. Kết luận
    
