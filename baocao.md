@@ -393,26 +393,82 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
       - Cơ chế nhắc nhở tự động:
         + ên lịch nhắc nhở kiểm tra định kỳ dựa trên thông tin giam giữ hoặc lịch hẹn.
         + Ứng dụng: Tự động gửi thông báo qua email hoặc hệ thống UI.
-## 4. Thiết kế hệ thống con Danh sách các hệ thống con cho bài toán Mentcare: A mental health support system:
-- **Quản lý bệnh nhân**: Thêm mới, cập nhật, tìm kiếm, hoặc xóa bệnh nhân. 
+          
+## 4. Thiết kế hệ thống con :
+
+### **1. Quản lý bệnh nhân**: Thêm mới, cập nhật, tìm kiếm, hoặc xóa bệnh nhân.
+   **1.1 Mô tả chức năng**
+   - Chức năng :
+      + Quản lý thông tin bệnh nhân (thêm, sửa, xóa, tìm kiếm).
+      + Quản lý lịch sử điều trị của từng bệnh nhân.
+   - Yêu cầu giao diện:
+      + Biểu mẫu nhập liệu (Forms) để thêm/sửa thông tin bệnh nhân.
+      + Màn hình hiển thị danh sách bệnh nhân kèm chức năng tìm kiếm.
+   
+   **1.2 Sơ đồ lớp**
+   
+   ![diagram](https://www.planttext.com/plantuml/png/b5CzJlD04ErzYb4gaE02AuGGK20HG2XkA9t5yYxOaoXUIo14GKM1aCWD2Ac8S0NDvzMd59EBp0cu0h8ns37_MyticxVpzitkivsknSORc2GAdRudZxt0XzOMsqimYkqG0zXFE1iZXFGVkcmlKG4gkiCMd3a0ClJY65hVrkJBA9f4wmMqcoCBtIeMK0CM1NHxlT3ti6HApjB-hk8iDNL-HEDQAa2ZMO9V7tf2ZzuFfttW67gOku7HD4as5AK2tBVGfOTeMtCsZHO5j7LiLcgCLGVWtAbCM__KgOZ6HVyoLMolNPgWW8uPQ0pARGpezhIZKGdOz8nVkVo4WQknhMc2RSv6ii4BsLv9rM6R7hYSJKkHxVdTfj1N66AsAPo2uMnQoPMAitkStVHerDGu6sgs5uaxO7lLW8nAs0xbx8R6c_GFWrB7QqspVU4kI4LfCGCuBWok9Fp98aaZ-JwkRKMvGpjUlsoz17lT8r-QTmbVl-pbvTNc24Njh-JSURGWV6QbW0rwB2TJ83_t_SeI0VaBB5Fdt5dpyJ3_sIy0003__mC0)
+   
+  **1.3 Sơ đồ trình tự** 
+  ![diagram](https://www.planttext.com/plantuml/png/T98nIWD168NxESLZAoroWIr2s2p4O1353TZ9P7V936x-bTrPCQLOfB0IBw2c2mOiKcKGYn7lCIVm2Z8ROjIGzkTzxtzl_ldIxwrIyK9LeupnMEK5ZeHvflChQMO4Ng9VfWKRv1Kbl1Z3wqYU8v5MJmWdbLrE2Pbvmy0D1CYndiCw_IwBSr95di6B2lD20X_tqkgR2XT2MdrBsr1x1MHfmL9IKetXzVAXZBULzPWbNF41BrDuxTEmjwqA0yPSVZIQBf2FI9ZPw8yEUv4m2nf6ae9wNDVVPvr-rr6RH3xEh9xNPLNjiWDi_n2EhtFwE7I5Hr05Xx1wUedCwiakXrNbHXDXuAFt-LgvXGiQGicTSSC0ZSswI9X74eYTSctthyong6ydh7wGpd-Z_rrW_Mu7guCfOVKThirJ319sEIVMIYbnN-SR003__mC0)
   
-  ![diagram](https://www.planttext.com/plantuml/png/T98_JiCm6CLtd-9JfZBq0Xcg2Y8nK5L2P62pt2IABTBFoBLHEo86PiG5-BDLL834L0jrSCKzV0AkW1n4sn1rVNg_b_Szvzkk-XFDb3RZYh1CImL3xfwGNWatHpgZsYzNm2OmB8qKYS6IZAJ1dAaPHCU2IPeBRs-HdXg_V4PQkKyw2WAd67AYm0PV8WeacKIjP0LHgjmBShg-4zvU6th1XRSts2PJ9P0deZ0dFF05Qg5d40raARAskvP9pZGRiKa1qT5PCcYxWah8vXxezZO5Oz3SpSSDffDozu5bAl2mLkjv3iWV4l1conYctYxg9UgqFG5D2Bgzt_enJDrZHZNtzZtRWzR6G8HJOgY-tWpLojlNFVvWs_c0vku1ESs2TPlr_uY6grrsEzabhr-UUtilEhjKSwJDu36SXmkH--K2IR_0FFnxFm000F__0m00)
+### **2. Theo dõi điều trị**: Gửi cảnh báo, kiểm tra tuân thủ điều trị.
+   **2.1 Mô tả chức năng**
+      - Chức năng:
+         + Theo dõi tình trạng tuân thủ điều trị của bệnh nhân.
+         + Gửi cảnh báo khi phát hiện vi phạm.
+      - Yêu cầu giao diện:
+         + Màn hình theo dõi lịch sử điều trị.
+         + Thông báo trạng thái tuân thủ (đạt/không đạt).
+         
+   **2.2 Sơ đồ lớp**
+   
+   ![diagram](https://www.planttext.com/plantuml/png/V9CnQiCm58Ptd-AHgHro0LD2I3eK6h945r0TOudQSh3bePGCfKE6K4XkqCH38E2fTB663if5tWbwXIBRrB59xCrwt_lVhz_Fl-fd64iQoIJmhGLrdgddGky1rGeaGxKL7X3cXZ3NtnnEMuxgBG4PeLhtuDK2S7mQnz3hPCppp56z1oIY9D5xGHYgmqsWqn6gbM1JflV21YxahGqamdmdFCBqZjTm9UEXolWOyrImaTw5LoIUmj1tgR00bbRjiGH16B8s5kYqQAjU6QeFee_2XfcCkF2gOn_Lsc4pLDbfKzoFcElPCE6nl9jSB0vQuqiAObJPjP02dJRbQr_2qvylpU8zbMvLbIn1jNLE6vq-wcFBkxmOQ4VGvwuh2AIXG1giM8n3xVfSlpNQmJnRJ1dccPnWVX1ZOvF_Moy6NT-TVd_G_cfslOscjLai-8wORHZhh-QX4UdeA1Gx8YWLgm1Am5fQGrVCpU_q1m00__y30000)
+   
+   **2.3 Sơ đồ trình tự** 
+
+  ![diagram](https://www.planttext.com/plantuml/png/V991Qi9068NtSuf7Lkt22sGX4WEsQBjfXEvaJ88p62TqCX6oB5rquQf7K952QUcgcmp5HNgHEK6lK4QnqIhT3k_xttl_FzzwtSeKbIgV98I6AfMuPjL23AQyUX63Og1CkGRDqCzYIOPfBY8g2pWTJbD4tEX7WO35AQBgW-FhYHjzdqD9esUEnJhzInAcGiaqWHF8wbMmNzMOSQCVn0cglIMIM99OAAuAEBrqnCCJqiqxYQYYGvh5SDetVk-4pFS8iHNGQDfCBhhMUm8bALHUBGGKC_ePPrVLqhEjs6ODvwJJlxHCdSZ5hT5lIAfFZEiPHrmDM7oJqaNFbAi2aT7lIEpkyl-zjvqRJVYUYq3c1QQcN0aaHiz2XipcEAXwFCBtqAZzkwPSAzpbfbpk3zaP_UaPI5FEnGYALNE-d_IWt6wX5zjZMi7CfgbHqef5PF_N3m000F__0m00)
   
-- **Theo dõi điều trị**: Gửi cảnh báo, kiểm tra tuân thủ điều trị.
+### **3. Quản lý báo cáo hành chính**: Tạo, lưu trữ, truy vấn báo cáo.
+   **3.1 Mô tả chức năng**
+      - Chức năng:
+         + Tạo, lưu trữ và truy xuất báo cáo hành chính.
+         + Xuất báo cáo tổng hợp và chi tiết.
+         
+   **3.2 Sơ đồ lớp**
+   
+   ![diagram](https://www.planttext.com/plantuml/png/X9AnJiCm48PtFyKf4mmLkmTKjPLWO46DM123IIF78h6hnXagr8695KO69Aog2r9Um1PYC2zoJy0hL2arLK8hF9ryz_l_xfU_tMU_r6ocgo8dKvRSCPv2T8xk4NI6xbbokApGBYNa_WDklL6GUACYk2S0ISxA4gB30ytHQ8qQUAE6tgWZBVnxDSnyJI4EPMWUKmZbLfkZNSr_jOLVXfg2aBezlo0xei5VZAuuq3KGNq_e7YYCzKn8lcr8T2zYL4dUlUV-RHutEr4OCPrsd3TBGPBvUbyMkK9hn8wZzV8qGskAAn5dw5x5cM3on-7w9dWSIBhNEssjJ673TtBHfFUFR3ylXJ6w6YReLfAJ1UcdSj9ya3K0003__mC0)
+   
+   **3.3 Sơ đồ trình tự** 
+   
+  ![diagram](https://www.planttext.com/plantuml/png/Z98nQiCm58PtdUBXgHro0GyXs0OtD4kf3Ts2OfjQr9MeB0KybWuTCkK89dG93TqjIWRb8Zf1hn1aDtLhEcGL__U__tzFNse_AGNcGZuM22U2SRYHfjdGkU16hUPBehSKS0bncN6qO9Acc5VWX0GpI8bHh_GRW49_maBN319TCySoOJn52QE2imASYEjtciDXJOnwbl2G4wDUw83mEtMHSPHHGKG5pepTasGWQzzGYWLUu383nxyDPWD9u25aCyDeR7Eu49ccPhq8BYAYjzBFzSxJDVDrpIvH64-jla_XmfrHkxQQE8FtVq1hqwOyRt1NSZI6m7CXuhA2fMdUAAH6VK1Xrop_vG8FHlsaQzFi1JpPS_mcJ-w3PjQbItHOwqtNxq-3q-Qkkak9tAXLtmDDCfhQNtC4003__mC0)
   
-  ![diagram](https://www.planttext.com/plantuml/png/V98nJiCm58RtdCBA10CNo80gYCJGqeNkJsuInLPJMpWs8YDYOEZ44Kg5a10L4qiirC5Sn2VW2kXLD6ben6fz___-zpz_sysWr5HfCoy2ccYfo9Yv9m4ttBqAg43xUaDeISQvaJms8W-cqeYKgeg45vnAIBct3m8cB9EGkWyENu_Sspi3Mdcx256BNCmp4IHIQ2KB4awKUnEiGMUCUtilUgGJnGMBUMQ630qoeRckI3YIEKzwyErxa59DfxJCI7X-5OzwC7mEWcObSdBQP8p83BFCGIiAsc0LcddxSdJfLcUuATlsSnpi12Zkfep8hRThADmdj5u7-gu6NRRX8rBu-hdwT_G8GLJW7Zj1mHC6fRVh0nofFV_KstSey6gcTVgxWLQ-NeeSD7DBlX-c9tTRtUyP4LnWtQr5fwwc-8WCVRtHS6rylUfC6MGYnI_v0m00__y30000)
+### **4. Quản lý giam giữ**: Xác thực, lưu trữ, kiểm tra thông tin giam giữ.
+   **4.1 Mô tả chức năng**
+      - Chức năng:
+         + Lưu trữ và kiểm tra thông tin giam giữ bắt buộc của bệnh nhân.
+         + Gửi thông báo khi có thay đổi về trạng thái giam giữ.
+
+   **4.2 Sơ đồ lớp**
+   
+   ![diagram](https://www.planttext.com/plantuml/png/V9B1Qi9048RlUOh1KuNw0die8eA55g4qBx1Dm-xIP69rSv3YsLEXla6jb88WNdhQ81xM5vadw2kKHAERDkqUvvz_vflP-SgsxP7cGvt6aJVWmGCN8JGkAPk2bfJDKC1DIcQ14DaD2CLZ48goTGEUF80WugCHDFx9o9-MTXdxqdwYy1Ns58zxUSAPBaCCZi4cWxiaYKAE1tD4vdrSOuxjeaFP56LVsZTae50tdJe7Tq1cDUXBCYlj3ydCKVZIpbNkFgOMtdFGZixWLWyLYWhDn3jDtAiPyrVDK_mdQJcRtNIJibUvh1eCRo-XiA_Z3fcrthsG-KWPTBaENV6Ap5RxqfhWgBdKUmp0dAF2xK99ofvzkqIdUL7ZhrzkjIwg-s3EnUG-LokIgnWChfLT8Zoc764t8xD5R-ArGxpFJ_8R003__mC0)
+   
+   **4.3 Sơ đồ trình tự** 
+   
+  ![diagram](https://www.planttext.com/plantuml/png/T951IiD068NtSuf7Lhhe1R8efGr4COXY2-xAD0cPmMGYoKJiKbnquKgyWDfTiTI5gmxInOZtc1Du1PcKsXBgzkTzxt_l_t_KgbDAMiWgImaDPLxWbEbNCRpXUYQ6uw4qonLeYK4P5sIKLoAYnHYEpscEY1ir4JYlp78gaEfF99ncIBXH2yT2_k2OXBcGHPx2wHVwJJ1yFNAZxYfSCMxKlMWYlRKyZGiI2ydb64wG9pniwkeXYQYa8rh6S7eNNj3KU5r2R6wqsZQAYpxJimoIwG-HGFBTvJZmZ5e4jb7bSvhvTdX8_C6nfRUfN5mQDQ_BojfjFzVx0onUXtLnOXjda0K5CsfwZTIeoJy6wzAjDhokY-3xlTgDlH_nkcXjb_MPVXOCeOKsReqcPwn-73FgYLlxhNut_kPuH-j_IMRK0sxrImZ1p78kI2SMKPMblm000F__0m00)
   
-- **Quản lý báo cáo hành chính**: Tạo, lưu trữ, truy vấn báo cáo.
-  
-  ![diagram](https://www.planttext.com/plantuml/png/V9A_IWGn4CRxFCMmbHRt0biSXxTWuI68suVi7pR1DO5i8cuf5XPMzmZBONDus6yGYzoBv0by1SdTkVyGs-7tpNpppNoRhqMbY5JwlaGaLKB2ZNRjXcCbdNd53ynkEP0AhWijMAHvWHAXUKPa3S4b8m9dp9aNZa-gqdxYn3O2fxOHWHTwA68vHwdWIeeIWbZQTqxnVisSUTBuZZ9ddlb45al6QSHoVKMzEEUAgHg2bIXOEa4FDPGHHH9IvH0iRwFL1F4bXBeTO3RlV8MWNDk8Nd0MCxlLIsftv-WNyeAnen0UdTcDznqgnpJCvaUR_qux41xrTaCeNVjMuyoP3rpwaFMGzSYWwu3gU_SDfzux1E_NTeCFdlwmt6Tqkf6Y_Ydw0SDykdH3kEY0HSup_re_0000__y30000)
-  
-- **Quản lý giam giữ**: Xác thực, lưu trữ, kiểm tra thông tin giam giữ.
-  
-  ![diagram](https://www.planttext.com/plantuml/png/P9BDIWCn58NtUOemgxhm1MOX1GTSM0fY5-v2EZFClJYzaJIHTYakN8iluC-kMAhWga5SHFeUUG9VGJ9WsnctzvxlSiv9VjnNVsgaDdPICvaRfVaG_3E9Q_GBudBAXvLLc5cgs5XPAgIUy-G4fH851dT7uio6zGk9sd-A2kL4L1ZSAebaL6LO4iiL6QrgdeoqVoKGt_SOt8qLbu31tLAN6saaoB2qfn3faWoQEKy6giAygss6h916ZkMqvCdnUJReQkACiMqEVdYqjPPo0tun4GRy1rN2uBwPNXRSQX1JsWFsHqIwRJ3bi-2MJG7DiHOsQaaZt3XE-Sm_vS90SEzv2sZMKHTTfxpUl5bXTDTDNEuTC-0V2KGUG-mkT6ssLF-DxJgvWkP98RW7xErJxHgsZQRy8gOX2EibiNv9HVnDlm000F__0m00)
-  
-- **Hệ thống tích hợp**: Đồng bộ hóa với các hệ thống kê đơn thuốc, lịch hẹn và hồ sơ bệnh án
-  
-  ![diagram](https://www.planttext.com/plantuml/png/X5AnQiCm5Dpr5S9JElG7F9H030tKT8c7RaAnZINgFWL7XcGi7JA7JDqIGfTI4mgTB4e6zKVU5_GNYWnjx2JGzUdktjqzVPjzVwfveSk7dF1Ogu8EqIoO5cYMaB6nVGK6cR9hIVcK3jD8ACXkCyKb6QiI4bxCgNSjkMA9HBC05jag5aoWsKuyHt5lWKo1n0fqeNBgHOLz0y6-bXBDOydkXKJp14mV4QD2WWXaMju8Hqz1IpsdNgWo6P-0cob9kEPZFasfDnW5uGd83GbfPw2NLty6VVgrHBDoeT4yimJDZkKkKzaB5TOR6Q3PXStWWloId43Ng4zdQ2gMsq_MrZkZqUKvfIQ5JsTs4pSNU8_Fq1gGGmz6GUZJ7EkN-Jzk7RAbdw6ff7DNxy7LS_RSXpt7-JerQM7N85XiFo0xa-XGxaHWlMtMhMIlpUgMsRwEJ-zS4o2mhg3J9kcdaBWl-mC00F__0m00)
+### **5. Hệ thống tích hợp**: Đồng bộ hóa với các hệ thống kê đơn thuốc, lịch hẹn và hồ sơ bệnh án
+ **5.1 Mô tả chức năng**
+   - Chức năng:
+     + Đồng bộ dữ liệu với các hệ thống bên ngoài như kê đơn thuốc, hồ sơ bệnh án quốc         gia và lịch hẹn.
+     + Gửi và nhận dữ liệu từ API.
+   **5.2 Sơ đồ lớp**
+       
+   ![diagram](https://www.planttext.com/plantuml/png/b98nJiD044LxdsAKof781LAWAAAm108aV07RiNQNc74KsnLAGPKsbgjqMEc2B0geCWN5Mhd7d21NG4u01qWWsMABqVm_x-_EYjuwKUmCu-GkC0QErtU43msBQGonP4fHWAqBJu9acWqQS6y0U84JHT3OgbVtbs3JL9qoPSfGT9ccbdvnpfYUBnJJE363a1UvgWjjk8c72iK9zBPgL-wjxyNDDhXX6FWEVjYYv4M1jTXcUgg8xStyIn7gHxLtHFFJrm0O6NMSRvdxUWvbkimHOfamfLuTIZ0LofRw5OMjy5pFoyaoH_DWxcl9YnbQJ9ao3sAHJ1b4onnSfZ5Aq3dke-ckE_J34JWxjB-e_lZgLklq_wThGpbPRq8LONgiuSxyFon7HiV7NhN3xm000F__0m00)
+   
+   **5.3 Sơ đồ trình tự** 
+   
+  ![diagram](https://www.planttext.com/plantuml/png/R9AnQYf158RxUOgVhN8BNs0B4RD19HO13TnEndNP6UvwDeop8PRX5jPYTJk3X0lXIbAasY6ac93tE4zmNo5i9AZHTlY_Cz_vEV_TQsDYfR75E1Cojhb1czriO1MxEQM3eN-W0QMvNsh82SvkR698Phtfn2PZCSmB6aapHT3ICiT8iviH-duTAoXsgwkWWbgN7H7dP4sU8UWR_uyKtkQQtMs1Nqgp-tt8d6xoMM94GbRRAO9kdkhu8FZvAaRIog6S90XEUr7t81GrXTXNHwrUUOLeiLjhJFr3WPZBlmNUvkmMb6B8xWzE8dQFtMgjeirkqNk_-o5QbvsAtXg6-CbkZSo_xCuvXcwPQiAdUeZpge4nh94ROsJiPaVnJGErEg9cYExxKm5hs3qUpKPDrBP_z9LVaaBidodz6lDjXml5vOegXOM6tStlMd_LrZTShd3DxXOt_Yu6AIxNjEccLlzs9o7QkLyIB9VtTgzWqKXeL8op3m000F__0m00)
 
 ## 5. Thiết kế các lớp
 ## 6. Kết luận
