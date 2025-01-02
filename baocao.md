@@ -409,7 +409,8 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    
    ![diagram](https://www.planttext.com/plantuml/png/b5CzJlD04ErzYb4gaE02AuGGK20HG2XkA9t5yYxOaoXUIo14GKM1aCWD2Ac8S0NDvzMd59EBp0cu0h8ns37_MyticxVpzitkivsknSORc2GAdRudZxt0XzOMsqimYkqG0zXFE1iZXFGVkcmlKG4gkiCMd3a0ClJY65hVrkJBA9f4wmMqcoCBtIeMK0CM1NHxlT3ti6HApjB-hk8iDNL-HEDQAa2ZMO9V7tf2ZzuFfttW67gOku7HD4as5AK2tBVGfOTeMtCsZHO5j7LiLcgCLGVWtAbCM__KgOZ6HVyoLMolNPgWW8uPQ0pARGpezhIZKGdOz8nVkVo4WQknhMc2RSv6ii4BsLv9rM6R7hYSJKkHxVdTfj1N66AsAPo2uMnQoPMAitkStVHerDGu6sgs5uaxO7lLW8nAs0xbx8R6c_GFWrB7QqspVU4kI4LfCGCuBWok9Fp98aaZ-JwkRKMvGpjUlsoz17lT8r-QTmbVl-pbvTNc24Njh-JSURGWV6QbW0rwB2TJ83_t_SeI0VaBB5Fdt5dpyJ3_sIy0003__mC0)
    
-  **1.3 Sơ đồ trình tự** 
+  **1.3 Sơ đồ tuần tự** 
+  
   ![diagram](https://www.planttext.com/plantuml/png/T98nIWD168NxESLZAoroWIr2s2p4O1353TZ9P7V936x-bTrPCQLOfB0IBw2c2mOiKcKGYn7lCIVm2Z8ROjIGzkTzxtzl_ldIxwrIyK9LeupnMEK5ZeHvflChQMO4Ng9VfWKRv1Kbl1Z3wqYU8v5MJmWdbLrE2Pbvmy0D1CYndiCw_IwBSr95di6B2lD20X_tqkgR2XT2MdrBsr1x1MHfmL9IKetXzVAXZBULzPWbNF41BrDuxTEmjwqA0yPSVZIQBf2FI9ZPw8yEUv4m2nf6ae9wNDVVPvr-rr6RH3xEh9xNPLNjiWDi_n2EhtFwE7I5Hr05Xx1wUedCwiakXrNbHXDXuAFt-LgvXGiQGicTSSC0ZSswI9X74eYTSctthyong6ydh7wGpd-Z_rrW_Mu7guCfOVKThirJ319sEIVMIYbnN-SR003__mC0)
   
 ### **2. Theo dõi điều trị**: Gửi cảnh báo, kiểm tra tuân thủ điều trị.
@@ -425,7 +426,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    
    ![diagram](https://www.planttext.com/plantuml/png/V9CnQiCm58Ptd-AHgHro0LD2I3eK6h945r0TOudQSh3bePGCfKE6K4XkqCH38E2fTB663if5tWbwXIBRrB59xCrwt_lVhz_Fl-fd64iQoIJmhGLrdgddGky1rGeaGxKL7X3cXZ3NtnnEMuxgBG4PeLhtuDK2S7mQnz3hPCppp56z1oIY9D5xGHYgmqsWqn6gbM1JflV21YxahGqamdmdFCBqZjTm9UEXolWOyrImaTw5LoIUmj1tgR00bbRjiGH16B8s5kYqQAjU6QeFee_2XfcCkF2gOn_Lsc4pLDbfKzoFcElPCE6nl9jSB0vQuqiAObJPjP02dJRbQr_2qvylpU8zbMvLbIn1jNLE6vq-wcFBkxmOQ4VGvwuh2AIXG1giM8n3xVfSlpNQmJnRJ1dccPnWVX1ZOvF_Moy6NT-TVd_G_cfslOscjLai-8wORHZhh-QX4UdeA1Gx8YWLgm1Am5fQGrVCpU_q1m00__y30000)
    
-   **2.3 Sơ đồ trình tự** 
+   **2.3 Sơ đồ tuần tự** 
 
   ![diagram](https://www.planttext.com/plantuml/png/V991Qi9068NtSuf7Lkt22sGX4WEsQBjfXEvaJ88p62TqCX6oB5rquQf7K952QUcgcmp5HNgHEK6lK4QnqIhT3k_xttl_FzzwtSeKbIgV98I6AfMuPjL23AQyUX63Og1CkGRDqCzYIOPfBY8g2pWTJbD4tEX7WO35AQBgW-FhYHjzdqD9esUEnJhzInAcGiaqWHF8wbMmNzMOSQCVn0cglIMIM99OAAuAEBrqnCCJqiqxYQYYGvh5SDetVk-4pFS8iHNGQDfCBhhMUm8bALHUBGGKC_ePPrVLqhEjs6ODvwJJlxHCdSZ5hT5lIAfFZEiPHrmDM7oJqaNFbAi2aT7lIEpkyl-zjvqRJVYUYq3c1QQcN0aaHiz2XipcEAXwFCBtqAZzkwPSAzpbfbpk3zaP_UaPI5FEnGYALNE-d_IWt6wX5zjZMi7CfgbHqef5PF_N3m000F__0m00)
   
@@ -439,7 +440,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    
    ![diagram](https://www.planttext.com/plantuml/png/X9AnJiCm48PtFyKf4mmLkmTKjPLWO46DM123IIF78h6hnXagr8695KO69Aog2r9Um1PYC2zoJy0hL2arLK8hF9ryz_l_xfU_tMU_r6ocgo8dKvRSCPv2T8xk4NI6xbbokApGBYNa_WDklL6GUACYk2S0ISxA4gB30ytHQ8qQUAE6tgWZBVnxDSnyJI4EPMWUKmZbLfkZNSr_jOLVXfg2aBezlo0xei5VZAuuq3KGNq_e7YYCzKn8lcr8T2zYL4dUlUV-RHutEr4OCPrsd3TBGPBvUbyMkK9hn8wZzV8qGskAAn5dw5x5cM3on-7w9dWSIBhNEssjJ673TtBHfFUFR3ylXJ6w6YReLfAJ1UcdSj9ya3K0003__mC0)
    
-   **3.3 Sơ đồ trình tự** 
+   **3.3 Sơ đồ tuần tự** 
    
   ![diagram](https://www.planttext.com/plantuml/png/Z98nQiCm58PtdUBXgHro0GyXs0OtD4kf3Ts2OfjQr9MeB0KybWuTCkK89dG93TqjIWRb8Zf1hn1aDtLhEcGL__U__tzFNse_AGNcGZuM22U2SRYHfjdGkU16hUPBehSKS0bncN6qO9Acc5VWX0GpI8bHh_GRW49_maBN319TCySoOJn52QE2imASYEjtciDXJOnwbl2G4wDUw83mEtMHSPHHGKG5pepTasGWQzzGYWLUu383nxyDPWD9u25aCyDeR7Eu49ccPhq8BYAYjzBFzSxJDVDrpIvH64-jla_XmfrHkxQQE8FtVq1hqwOyRt1NSZI6m7CXuhA2fMdUAAH6VK1Xrop_vG8FHlsaQzFi1JpPS_mcJ-w3PjQbItHOwqtNxq-3q-Qkkak9tAXLtmDDCfhQNtC4003__mC0)
   
@@ -453,7 +454,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    
    ![diagram](https://www.planttext.com/plantuml/png/V9B1Qi9048RlUOh1KuNw0die8eA55g4qBx1Dm-xIP69rSv3YsLEXla6jb88WNdhQ81xM5vadw2kKHAERDkqUvvz_vflP-SgsxP7cGvt6aJVWmGCN8JGkAPk2bfJDKC1DIcQ14DaD2CLZ48goTGEUF80WugCHDFx9o9-MTXdxqdwYy1Ns58zxUSAPBaCCZi4cWxiaYKAE1tD4vdrSOuxjeaFP56LVsZTae50tdJe7Tq1cDUXBCYlj3ydCKVZIpbNkFgOMtdFGZixWLWyLYWhDn3jDtAiPyrVDK_mdQJcRtNIJibUvh1eCRo-XiA_Z3fcrthsG-KWPTBaENV6Ap5RxqfhWgBdKUmp0dAF2xK99ofvzkqIdUL7ZhrzkjIwg-s3EnUG-LokIgnWChfLT8Zoc764t8xD5R-ArGxpFJ_8R003__mC0)
    
-   **4.3 Sơ đồ trình tự** 
+   **4.3 Sơ đồ tuần tự** 
    
   ![diagram](https://www.planttext.com/plantuml/png/T951IiD068NtSuf7Lhhe1R8efGr4COXY2-xAD0cPmMGYoKJiKbnquKgyWDfTiTI5gmxInOZtc1Du1PcKsXBgzkTzxt_l_t_KgbDAMiWgImaDPLxWbEbNCRpXUYQ6uw4qonLeYK4P5sIKLoAYnHYEpscEY1ir4JYlp78gaEfF99ncIBXH2yT2_k2OXBcGHPx2wHVwJJ1yFNAZxYfSCMxKlMWYlRKyZGiI2ydb64wG9pniwkeXYQYa8rh6S7eNNj3KU5r2R6wqsZQAYpxJimoIwG-HGFBTvJZmZ5e4jb7bSvhvTdX8_C6nfRUfN5mQDQ_BojfjFzVx0onUXtLnOXjda0K5CsfwZTIeoJy6wzAjDhokY-3xlTgDlH_nkcXjb_MPVXOCeOKsReqcPwn-73FgYLlxhNut_kPuH-j_IMRK0sxrImZ1p78kI2SMKPMblm000F__0m00)
   
@@ -462,11 +463,12 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    - Chức năng:
      + Đồng bộ dữ liệu với các hệ thống bên ngoài như kê đơn thuốc, hồ sơ bệnh án quốc         gia và lịch hẹn.
      + Gửi và nhận dữ liệu từ API.
+       
    **5.2 Sơ đồ lớp**
        
    ![diagram](https://www.planttext.com/plantuml/png/b98nJiD044LxdsAKof781LAWAAAm108aV07RiNQNc74KsnLAGPKsbgjqMEc2B0geCWN5Mhd7d21NG4u01qWWsMABqVm_x-_EYjuwKUmCu-GkC0QErtU43msBQGonP4fHWAqBJu9acWqQS6y0U84JHT3OgbVtbs3JL9qoPSfGT9ccbdvnpfYUBnJJE363a1UvgWjjk8c72iK9zBPgL-wjxyNDDhXX6FWEVjYYv4M1jTXcUgg8xStyIn7gHxLtHFFJrm0O6NMSRvdxUWvbkimHOfamfLuTIZ0LofRw5OMjy5pFoyaoH_DWxcl9YnbQJ9ao3sAHJ1b4onnSfZ5Aq3dke-ckE_J34JWxjB-e_lZgLklq_wThGpbPRq8LONgiuSxyFon7HiV7NhN3xm000F__0m00)
    
-   **5.3 Sơ đồ trình tự** 
+   **5.3 Sơ đồ tuần tự** 
    
   ![diagram](https://www.planttext.com/plantuml/png/R9AnQYf158RxUOgVhN8BNs0B4RD19HO13TnEndNP6UvwDeop8PRX5jPYTJk3X0lXIbAasY6ac93tE4zmNo5i9AZHTlY_Cz_vEV_TQsDYfR75E1Cojhb1czriO1MxEQM3eN-W0QMvNsh82SvkR698Phtfn2PZCSmB6aapHT3ICiT8iviH-duTAoXsgwkWWbgN7H7dP4sU8UWR_uyKtkQQtMs1Nqgp-tt8d6xoMM94GbRRAO9kdkhu8FZvAaRIog6S90XEUr7t81GrXTXNHwrUUOLeiLjhJFr3WPZBlmNUvkmMb6B8xWzE8dQFtMgjeirkqNk_-o5QbvsAtXg6-CbkZSo_xCuvXcwPQiAdUeZpge4nh94ROsJiPaVnJGErEg9cYExxKm5hs3qUpKPDrBP_z9LVaaBidodz6lDjXml5vOegXOM6tStlMd_LrZTShd3DxXOt_Yu6AIxNjEccLlzs9o7QkLyIB9VtTgzWqKXeL8op3m000F__0m00)
 
