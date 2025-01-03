@@ -473,5 +473,41 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
   ![diagram](https://www.planttext.com/plantuml/png/R9AnQYf158RxUOgVhN8BNs0B4RD19HO13TnEndNP6UvwDeop8PRX5jPYTJk3X0lXIbAasY6ac93tE4zmNo5i9AZHTlY_Cz_vEV_TQsDYfR75E1Cojhb1czriO1MxEQM3eN-W0QMvNsh82SvkR698Phtfn2PZCSmB6aapHT3ICiT8iviH-duTAoXsgwkWWbgN7H7dP4sU8UWR_uyKtkQQtMs1Nqgp-tt8d6xoMM94GbRRAO9kdkhu8FZvAaRIog6S90XEUr7t81GrXTXNHwrUUOLeiLjhJFr3WPZBlmNUvkmMb6B8xWzE8dQFtMgjeirkqNk_-o5QbvsAtXg6-CbkZSo_xCuvXcwPQiAdUeZpge4nh94ROsJiPaVnJGErEg9cYExxKm5hs3qUpKPDrBP_z9LVaaBidodz6lDjXml5vOegXOM6tStlMd_LrZTShd3DxXOt_Yu6AIxNjEccLlzs9o7QkLyIB9VtTgzWqKXeL8op3m000F__0m00)
 
 ## 5. Thiết kế các lớp
+   ### 5.1 Ca sử dụng Quản lý chăm sóc cá nhân
+   #### 5.1.1 Xác dịnh các operations :
+   ![PlantTexxt](https://www.planttext.com/plantuml/png/Z90nYi9G54NxlufRpY_SWCKWMDWCLXRJXaJoFYOFqP_2siB2GYmiBRGKn42c6LynnHVtyLRW5cH84v202xZd7Ev3_dfp7yryaMUcEqplfShU8Gc_d7RHwNpYOqJXb2DJMSU4c6xB7FDGnOZ30KpXoBPbsDVhUGeclPuzF8KVJk4TDnXjo-zGHQz6QymRCJLXGAusSyDipJjDDU3hNXRm52rmswhid3LjLOtaHEM2pAci2an8PUD0AYjuKjboQarlpCd_qyOy0G00__y30000)
+   #### 5.1.2 Xác định các trạng thái : 
+   ![PlantText](https://www.planttext.com/plantuml/png/P94nQiD044NxESMWCk0Bg0W6fKWXL8aWC2a6nMWMx5bZhmgV88IGmaLwfGqO0acLBL9io3ts1Bb2M2aMmbl_jt_UplpQh_dEqDQqwnKiBcvnDhl4SalIPAo4CSKRrsbaR-_HiBS7QG0cUO_pSfshEi0PU_iac9JiNjUuylQnvWH68D1vsvQifIcLO8e5-y_Z1Wsx3sdGA85f7ibSQzT9e3lXo2EZJS5a9kqddQmV8c6McSnAuFp9A4ZxAwt-6nw4SUVjaIBDWOeiyv-t5WtJ7hyFtZwhoBJITBQmohtJkAzJtADK5qnIQS8KA_TI3zyGc0IHGDysR0dhe0ppfTo54mF07m000F__0m00)
+   #### 5.1.3 Xác định các thuộc tính :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9FPdA6SqPYRd1-ia8rbuA2ha9cYfM2Prv9Qdfg4PYVbvvOQQNWabYI2kQMPEJdfOTavbaf19SKPUQbSzLoGOtoIo_DpyHlLaagGX-8NvQO6LAKZsmKYY6wkdOe3hHIK0eiVRXhSPv2pk6zIbmEgNaf89zmSN5n0G000F__0m00)
+   #### 5.1.4 Xác định các phụ thuộc , quan hệ kết hợp
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bTgNabcIQM2NtffVgPpHc9kS7woGZMNWeAMGcQAbO9dNabgUceHc5-IccUb45nIb9cN3kQN9MQ65EN3XMgvO6RvP2Pdu3SgBpsnqah19R4a5M9oHdvUUaWcmlXQBYuK1zNKwEhcLwCORAMWvFDmrze2XPo7kxkJCvIu75BpKa0UukBYuW80003__mC0)
+   ### 5.2 Ca sử dụng Theo dõi bệnh nhân
+   #### 5.2.1 Xác định các operations :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3fULN_gn3GztpyrKI3cyCo_TIa5Nrqv18oJZyAfSXPACmrloqXLAClCKaXxkRi_BKCZBEBmeJnE79kU7kzOMAEHbFDorjaGXu-7koGh5nnOIfJCYDLUXvF2Ql0o5agA7knRcfQFfuYBW88WfFiSsbCBjrUGYnZr86aio4YiLZanyk7jgfYON8HT1z7baFjpTdATGal5mTpUIspIv75BpKa21oyN5nGK0003__mC0)
+   #### 5.2.2 Xác định các trạng thái :
+   ![PlantText](https://www.planttext.com/plantuml/png/V94nQiCm58PtdUB7Oo4Ny512tI53yH9J0gM3cXezG_KSR7de2J8LMaftfsDefdQAXWuglOTEq2iKcHYS6gf5eF-J_k-X7_ivhOsiJAFlnDN9DIQJKsILP9LGmOGObwujGTwkOSZR9rP23F8EfroVvKmfIKQCXBnzO4GPkQt6ZRTh9Z2vLux44HhkNZJDh9oNY96It-zMCEG-MC4KBFfif3GhNSk1R9d2jjKZfqIkKfBcy7Qlb7GL79fCcEaPzVSc4aFu89MHl3yl2yIOUxkJVxJwz7-pvQ1j9BZ8TLOmTQS3mqMkOTnRcAlo-mshI1oHeyQlH_VE2ilEilRsHKnplWs_sQrV0000__y30000)
+   #### 5.2.3 Xác định các thuộc tính : 
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9JQbw6NqPYda8rbuA2ha9cYfM2Prv9Qdfg4PXVaffdfH1SKfIPbmxXb-Pdegd8pCi8AKhCIuUhg-M2cksH7vmFCjyHb-bv-PakfKWwmMBfYPNEYGL-6OabLWekYIMf8FFWhjJLjKCsraf1oVdmPYKkXzIy592V8000003__mC0)
+   #### 5.2.4 Xác định các phụ thuộc , quan hệ kế hợp :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bTgNabcIQM2KsfUXbz6Ofv2DPU2WfP2PegLWcTUIMfwQX6ONvAQPwKGN5AKcPSEuPVcPwAfoCpB22bAp4k7gwlbWXdkaH-S3xB04PVnUVcPBgL8Mi5YwOcLpea5VXc99LOABeabgI03uSwigT7LpQz6DjbAGSdds8PIXPACmrloqa7kKU9oICrB0NaI2W00003__mC0)
+   ### 5.3 Ca sử dụng Quản Lý Giam Giữ Bắt Buộc :
+   #### 5.3.1 Xác định các operations :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3fULN_gn3GztpyrKA2nzk6jndaBEuRrM2hgwTWeQ8Hc7L-Kgv3pStPwNeP2UcPYha9xvSFTwJNnwd1_kMbkWa9VnSDVQ4eMIZCDRyj8LIZBpYDKUSNXp8ZORkN0w1gBFvzY6KbpM4UCc55CIAnMEJ7ouUsgc9XSk1o6vDkNXxlKAEPaFTxUNAcHdFDpTdwcGyN1tkq99niFT4_FIDRaSKlDIG24D0m00003__mC0)
+   #### 5.3.2 Xác định các trạng thái :
+   ![PlantText](https://www.planttext.com/plantuml/png/T96nIWD154Nx-OhBba9-O0i9h62pf76H1R5uhCk-WUpR46V1V44gYnJsiHM2GgoSmcB4_vWly1TaDXesRfpstllkUM--xFlurj3SjFLKNPrSOpGwHJOdgHBMmeXnwTODsDib37kxaagfdjxPkQpJKlXSKuqO2NjxBuWoTayrfjukXL45hTBUFaVgm1y6f6sRSIDLfWKn9kpVDZCOTgzImMXHVNt0btw-jC6y5aOH8WE-X6OJ9dC4CUcQ91IQNc6a_aRsbBGuQpHYN7YxeG7ZJlqFaHRuM7dxe0U4UKD7w7AtfP_xHQflwI9KJ9WaRmWnSlTOxDOGtBajgPuweEd67XniNCfD-F_Vzmq00F__0m00)
+   #### 5.3.3 Xác định các thuộc tính :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9FQbw6UsPYhdjcgK8rbuA2ha9cYfM2Prv9Qdfg4PXVafhdbrwQd-cK2L9dfH1SKfIPbmwMoajFhFH9BB1IS4aiIOKepipB22bAp4k7gwlbWjeKM9gOvrD9q2uK2yeICqEAyf7DGZL5LzSEnGTM2ag1fGztBSvJo3cyLudB8JKl1UHL6000003__mC0)
+   #### 5.3.4 Xác định các phụ thuộc , quan hệ kết hợp :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bTgNabcIQL2O6bYda-bUsPYhdjcgK8rbuA2ba9cYfM2Prv9Qdfg4PXVaffdfH1SKfIPbmxcboLcXXJbmuLgkM26-QJcPH0qoY-zD3_JAHEa3iNKlFJ4If_40Yi5byIIL8ZYpBoCaAB4l7Hagr0TN5EZgvjVZMAnbOAIUqQcGbx6mrrhyvIu75BpKa3-XG400000__y30000)
+   ### 5.4 Ca sử dụng Báo Cáo Hành chính :
+   #### 5.4.1 Xác dịnh các operations :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3fULN_gn3GztpyrKI3cyCo_TIa5Nrqv18-JXheNv2ac75-Oh91zUcA-9Gvdpmrrh2nJoCXxkMbj2MBNxmzrhCv6LSM7O0r7e1pAmG27luUwPcGeffNdfcbouh8Aw8-FXxiwy38NYXxlN9gBgGxSKeY7YyC9aY65v2kbW5KScPcfoEQJcfO021Ge00000__y30000)
+   #### 5.4.2 Xác định các trạng thái : 
+   ![PlantText](https://www.planttext.com/plantuml/png/X9AnQiCm48PtFSMHiU0No5127F0IlCIKGEbmTOebI4ycbOOyGQSE7ZfqgybiyD0f6Zee-3tq17s5ehgfLGojrl__x_xlq8Tvdpqet2bzlsNN5pSGHPUGxP2Ac0lYC8Kh-og1E_C8YZjJKS5Oe7_PKSvHnYXX2Z5tvebWahbZBU7MrX9oMyi96qm-ad8iKoaMcWgOGihTiIc1d7aHiD5Ki53t_gNMFokMNQj1SVj61IX1RD16tUVd_N2gx06sNQj7xMCiKuvgH13tdNmr5OByzli9Auq3oygP1aEKG8rwaepZVY75W89xE5NEF0lFSbR_XEbQPmuvv4774LYYnGWgSQOH8SrWyf4rvYb7IhGljxPrtiycA7oE1V9_f-u3iplQ-8_r_Ju1003__mC0)
+   #### 5.4.3 Xác định các thuộc tính :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9JOhvpOhv2DPU2Wgv2PegLWcTUIMfwQX6ONvAPMkgIQgKGN5AKcPSE5ihBptGfpKj75KjFh7GlpRHIS4aiIUMgvO8QxPTU2b6Co_JKF1HZoX8pGuhouKArN5m84tHrxM1EjL9GydcuQss14fT3QbuAo2Sm00000F__0m00)
+   #### 5.4.4 Xác định các phụ thuộc , quan hệ kết hợp :
+   ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bTgNabcIQM2NtffVgPBQLwwGZMNWeAMGcQAbO9dNabgUceHc5-IccUb45nIb9cN3kQN9MQ65EN3XMgvO0Ov9UOx9-RZCYKpjTGb5SMWF8Yrg6BfYPNkfPbM2Yw99QaWin6kgwdHrSslXjbYfQ0Kyd3Nmdo5eaGbBeVKl1IGZs000000__y30000)
 ## 6. Kết luận
    
