@@ -510,4 +510,20 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    #### 5.4.4 Xác định các phụ thuộc , quan hệ kết hợp :
    ![PlantText](https://www.planttext.com/plantuml/png/UhzxlqDnIM9HIMbk3bTgNabcIQM2NtffVgPBQLwwGZMNWeAMGcQAbO9dNabgUceHc5-IccUb45nIb9cN3kQN9MQ65EN3XMgvO0Ov9UOx9-RZCYKpjTGb5SMWF8Yrg6BfYPNkfPbM2Yw99QaWin6kgwdHrSslXjbYfQ0Kyd3Nmdo5eaGbBeVKl1IGZs000000__y30000)
 ## 6. Kết luận
-   
+   #### 6.1.Mô tả tóm tắt bài toán:
+   - Mục tiêu của hệ thống là hỗ trợ quản lý bệnh nhân mắc các vấn đề về sức khỏe tâm thần trong khu vực Mid-Scotland.
+   - Hệ thống cung cấp thông tin quản lý, theo dõi điều trị, và quản lý giam giữ bắt buộc.
+   #### 6.2.Phân tích các ca sử dụng:
+   - Kiến trúc đề xuất là mô hình triển khai máy khách-máy chủ.
+   - Các cơ chế bảo mật, quản lý dữ liệu, và phân tích từng ca sử dụng được mô tả chi tiết.
+   #### 6.3.Xác định các phần tử thiết kế:
+   - Phân tích chi tiết các phần tử trong hệ thống như giao diện người dùng, lớp logic nghiệp vụ, lớp phân tích, và lớp dữ liệu.
+   #### 6.4.Thiết kế hệ thống con:
+   - Mô tả các chức năng quản lý bệnh nhân, theo dõi điều trị, quản lý báo cáo hành chính, quản lý giam giữ, và hệ thống tích hợp.
+   - Sơ đồ lớp và sơ đồ tuần tự cho từng hệ thống con.
+   #### 6.5.Thiết kế các lớp:
+   - Xác định các operations, trạng thái, thuộc tính, và quan hệ kết hợp cho từng ca sử dụng.
+   - Ca sử dụng "Quản lý chăm sóc cá nhân": Thêm, xóa, cập nhật, và tìm kiếm bệnh nhân. Các trạng thái bao gồm bệnh nhân mới, đã cập nhật, đã xóa. Các thuộc tính như mã bệnh nhân, tên, địa chỉ, ngày sinh, thông tin liên hệ.
+   - Ca sử dụng "Theo dõi bệnh nhân": Gửi cảnh báo, kiểm tra tuân thủ điều trị, cập nhật trạng thái điều trị. Các trạng thái bao gồm đang điều trị, không tuân thủ, đã gửi cảnh báo. Các thuộc tính như mã cảnh báo, mã bệnh nhân, nội dung cảnh báo, trạng thái điều trị.
+   - Ca sử dụng "Quản lý giam giữ bắt buộc": Thêm, cập nhật, xóa thông tin giam giữ. Các trạng thái bao gồm đang giam giữ, đã thả. Các thuộc tính như mã giam giữ, mã bệnh nhân, ngày giam giữ, ngày thả, lý do giam giữ.
+   - Ca sử dụng "Báo cáo hành chính": Tạo, lưu trữ, truy xuất báo cáo. Các trạng thái bao gồm báo cáo mới, đã lưu, đã truy xuất. Các thuộc tính như mã báo cáo, nội dung báo cáo, thời gian tạo.
