@@ -407,7 +407,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
    
    **1.2 Sơ đồ lớp**
    
-   ![diagram](https://www.planttext.com/plantuml/png/b5CzJlD04ErzYb4gaE02AuGGK20HG2XkA9t5yYxOaoXUIo14GKM1aCWD2Ac8S0NDvzMd59EBp0cu0h8ns37_MyticxVpzitkivsknSORc2GAdRudZxt0XzOMsqimYkqG0zXFE1iZXFGVkcmlKG4gkiCMd3a0ClJY65hVrkJBA9f4wmMqcoCBtIeMK0CM1NHxlT3ti6HApjB-hk8iDNL-HEDQAa2ZMO9V7tf2ZzuFfttW67gOku7HD4as5AK2tBVGfOTeMtCsZHO5j7LiLcgCLGVWtAbCM__KgOZ6HVyoLMolNPgWW8uPQ0pARGpezhIZKGdOz8nVkVo4WQknhMc2RSv6ii4BsLv9rM6R7hYSJKkHxVdTfj1N66AsAPo2uMnQoPMAitkStVHerDGu6sgs5uaxO7lLW8nAs0xbx8R6c_GFWrB7QqspVU4kI4LfCGCuBWok9Fp98aaZ-JwkRKMvGpjUlsoz17lT8r-QTmbVl-pbvTNc24Njh-JSURGWV6QbW0rwB2TJ83_t_SeI0VaBB5Fdt5dpyJ3_sIy0003__mC0)
+   ![diagram](https://www.planttext.com/plantuml/png/Z591Ri8m4Bpx5Nii4dp0GWYrELGYfQh8fSV5hE8jyPeIMof2lAo7FgbVg1AI4A9MvROUp-xChFRxysjU1jo7w0grGxF5dE2HCkibVuaewU6Un2ujob6P0iiIhb4uAW20OCcrqDswAJIqq4Z3slk2K6gsmTtIOkWQ77RZDB24CVmxuiFZd-q3Qk2BjS0K7onhoCv5nkGMJ6wa8UKoJ5lYJ9rKa_SgwL1A0LYVKVLQXJrBhW0anyEAnOA610EfQZjUyembPP8KJPzSiB6h-9eHD0xI5kXP69YjdTmWQz0qdGjRgpxXRdhcZ-5v_KOcz4GwuNgyiH4byNNEJcB35BCzzw5WepS99b7oDi7vhvuyk9N9P7PPfuRtY58SVYCD0si8J6xBvDGLx-9PW_7LBikeJcfEigdk-GS00F__0m00)
    
   **1.3 Sơ đồ tuần tự** 
   
@@ -424,7 +424,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
          
    **2.2 Sơ đồ lớp**
    
-   ![diagram](https://www.planttext.com/plantuml/png/V9CnQiCm58Ptd-AHgHro0LD2I3eK6h945r0TOudQSh3bePGCfKE6K4XkqCH38E2fTB663if5tWbwXIBRrB59xCrwt_lVhz_Fl-fd64iQoIJmhGLrdgddGky1rGeaGxKL7X3cXZ3NtnnEMuxgBG4PeLhtuDK2S7mQnz3hPCppp56z1oIY9D5xGHYgmqsWqn6gbM1JflV21YxahGqamdmdFCBqZjTm9UEXolWOyrImaTw5LoIUmj1tgR00bbRjiGH16B8s5kYqQAjU6QeFee_2XfcCkF2gOn_Lsc4pLDbfKzoFcElPCE6nl9jSB0vQuqiAObJPjP02dJRbQr_2qvylpU8zbMvLbIn1jNLE6vq-wcFBkxmOQ4VGvwuh2AIXG1giM8n3xVfSlpNQmJnRJ1dccPnWVX1ZOvF_Moy6NT-TVd_G_cfslOscjLai-8wORHZhh-QX4UdeA1Gx8YWLgm1Am5fQGrVCpU_q1m00__y30000)
+   ![diagram](https://www.planttext.com/plantuml/png/R991Ri8m44NtSufPjWikO5K8GHQL6h715nZSKMoHZ55YBn3AoRhWIBr2vH1Cah9zV_x_7jk_FxTD5wWDiQdXJEP45UCdQ-kbqfPzuLtXEEhMNS7Kr7KuftW5HCIJuqQtf2E9jl6jeIsBtLiIXKx2kqBTKWeaDuuChYgw7OdTad_XE7fVCmdqC1O_1eRAnJmWMgzP51v2wwG2nDePUuZZCHMMhWiVvPIjdz4pFkPdvprUAhfaL51WG0msUbFG5qzgmsBH5wldsgKoDEU0IQYXyzvIA4bsqJ_wUu35MwnMw-SjAGnt5J9A-dnLXSRF2CprvFXtocJA47hOi7odx_C7003__mC0)
    
    **2.3 Sơ đồ tuần tự** 
 
@@ -438,7 +438,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
          
    **3.2 Sơ đồ lớp**
    
-   ![diagram](https://www.planttext.com/plantuml/png/X9AnJiCm48PtFyKf4mmLkmTKjPLWO46DM123IIF78h6hnXagr8695KO69Aog2r9Um1PYC2zoJy0hL2arLK8hF9ryz_l_xfU_tMU_r6ocgo8dKvRSCPv2T8xk4NI6xbbokApGBYNa_WDklL6GUACYk2S0ISxA4gB30ytHQ8qQUAE6tgWZBVnxDSnyJI4EPMWUKmZbLfkZNSr_jOLVXfg2aBezlo0xei5VZAuuq3KGNq_e7YYCzKn8lcr8T2zYL4dUlUV-RHutEr4OCPrsd3TBGPBvUbyMkK9hn8wZzV8qGskAAn5dw5x5cM3on-7w9dWSIBhNEssjJ673TtBHfFUFR3ylXJ6w6YReLfAJ1UcdSj9ya3K0003__mC0)
+   ![diagram](https://www.planttext.com/plantuml/png/R96n2i8m48RtFCMDEeXx1X4jwE0Y1XTn-D6G1jjBiSbGn2Tpy95y1Qc9OgsPVhxS_VzTyhZTfxN7sOUo4AB2uGIZQQbLxjYi0tZLpE3cS7GHH4I70dLDVoxQu-4Y6tYhmpotabGK4GybHV7fA91S1YMYa6JPTmkluYlw9xHCRVJgIx1DppH9slYpPPCeEvi5DZriqAYNGGQl-u6T3JwvXSCR_VXLESgjLRcp2mjEjhjzChwApjkDHfFtHf8Kt7Y5fb_H7K7I9Xm36o6cce_jlpq1003__mC0)
    
    **3.3 Sơ đồ tuần tự** 
    
@@ -452,7 +452,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
 
    **4.2 Sơ đồ lớp**
    
-   ![diagram](https://www.planttext.com/plantuml/png/V9B1Qi9048RlUOh1KuNw0die8eA55g4qBx1Dm-xIP69rSv3YsLEXla6jb88WNdhQ81xM5vadw2kKHAERDkqUvvz_vflP-SgsxP7cGvt6aJVWmGCN8JGkAPk2bfJDKC1DIcQ14DaD2CLZ48goTGEUF80WugCHDFx9o9-MTXdxqdwYy1Ns58zxUSAPBaCCZi4cWxiaYKAE1tD4vdrSOuxjeaFP56LVsZTae50tdJe7Tq1cDUXBCYlj3ydCKVZIpbNkFgOMtdFGZixWLWyLYWhDn3jDtAiPyrVDK_mdQJcRtNIJibUvh1eCRo-XiA_Z3fcrthsG-KWPTBaENV6Ap5RxqfhWgBdKUmp0dAF2xK99ofvzkqIdUL7ZhrzkjIwg-s3EnUG-LokIgnWChfLT8Zoc764t8xD5R-ArGxpFJ_8R003__mC0)
+   ![diagram](https://www.planttext.com/plantuml/png/N591QiCm4Bph5KjE2JGVqA44OqYX8L2g3spTHHALLwczFfZYb_NG9_KBnKPHPUkc6StE3AlVxvzJBzZ9q0QbRjXye2NOFP5naUtBW7mPpnxRinzsyAK009g0VGyhAZ7p4KVjeZMU4xkNTDUGa8E6jnW38MTTm74hQx4YTbU7hC6p7B8yYngyNHsAwP2jSUZtBQOdY-81vCveU9NEizquJqMZRPSy2vPX6QrIg1KSnZh2tIHXsNnBiCMnGgbn7bsZK84_anWtD2KngI9bTl-FkGhYeg4vMc4ugKcfzRwEnyVSLyFdW1n6LP95oU29PtLDhDI9-7t-Ady0003__mC0)
    
    **4.3 Sơ đồ tuần tự** 
    
@@ -466,7 +466,7 @@ Dưới đây là biểu đồ sequence mô tả hành vi của ca sử dụng "
        
    **5.2 Sơ đồ lớp**
        
-   ![diagram](https://www.planttext.com/plantuml/png/b98nJiD044LxdsAKof781LAWAAAm108aV07RiNQNc74KsnLAGPKsbgjqMEc2B0geCWN5Mhd7d21NG4u01qWWsMABqVm_x-_EYjuwKUmCu-GkC0QErtU43msBQGonP4fHWAqBJu9acWqQS6y0U84JHT3OgbVtbs3JL9qoPSfGT9ccbdvnpfYUBnJJE363a1UvgWjjk8c72iK9zBPgL-wjxyNDDhXX6FWEVjYYv4M1jTXcUgg8xStyIn7gHxLtHFFJrm0O6NMSRvdxUWvbkimHOfamfLuTIZ0LofRw5OMjy5pFoyaoH_DWxcl9YnbQJ9ao3sAHJ1b4onnSfZ5Aq3dke-ckE_J34JWxjB-e_lZgLklq_wThGpbPRq8LONgiuSxyFon7HiV7NhN3xm000F__0m00)
+   ![diagram](https://www.planttext.com/plantuml/png/Z59B2i8m4Dtd58Eh2dg1BgGM5m551Nk1QHgIQ9qHswp4axdmI5v1RAEKKjIiafdt6oQFspsfQZpN_bWASK9rGADX97LccKpcb9Ly6i55002e4giAGZ50Gkjr2YQJicHS-9NJFYePNNkDOLUV7Pa95E6zoVTQrUCOSkPI8tr4o2ArfCm7YxLXT0DguxTCGxwAJiR0NEe5KsOzgqvCurqOZff-z5UchKMIxABVff9td6goSnesRNl_kVOuVVFUAgRJsS3aSLZC5tGdyWTz5OcculKjdW000F__0m00)
    
    **5.3 Sơ đồ tuần tự** 
    
